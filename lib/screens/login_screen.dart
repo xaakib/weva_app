@@ -34,12 +34,15 @@ class _LoginScreenState extends State<LoginScreen> {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             Image.asset(
               "assets/images/identify.jpg",
               height: 200,
               fit: BoxFit.cover,
+            ),
+            SizedBox(
+              height: 20,
             ),
             InternationalPhoneInput(
               onPhoneNumberChange: onPhoneNumberChange,
@@ -83,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   },
                             tristate: i == 1,
                             value: checked[i],
-                            activeColor: Color(0xFF6200EE),
+                            activeColor: Colors.red,
                           ),
                           Text(
                             'Remember ',

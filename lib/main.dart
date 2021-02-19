@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weva_app/screens/mainscreen.dart';
 
 import 'screens/login_screen.dart';
 
