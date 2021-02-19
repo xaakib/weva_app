@@ -11,17 +11,16 @@ class MainScreen extends StatelessWidget {
           showDialog(
               context: context,
               builder: (conetx) {
-                return Center(
+                return Dialog(
                   child: Stack(
                     overflow: Overflow.visible,
                     alignment: Alignment.topCenter,
                     children: [
                       Container(
-                        margin: EdgeInsets.symmetric(horizontal: 20),
                         height: 180,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(3),
                           border: Border.all(
                             color: Colors.red, //
                             width: 2.0,
@@ -39,14 +38,6 @@ class MainScreen extends StatelessWidget {
                                 color: Colors.black,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 20,
-                              ),
-                            ),
-                            Text(
-                              "Select Your language",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 18,
                               ),
                             ),
                           ],
