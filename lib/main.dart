@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weva_app/screens/mainscreen.dart';
 
+import 'screens/login_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MainScreen(),
+      home: LoginScreen(),
     );
   }
 }
