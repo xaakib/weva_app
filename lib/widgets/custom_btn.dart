@@ -47,7 +47,7 @@ class CustomBtn extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18.0,
                     color: _outlineBtn ? Colors.red : Colors.white,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
