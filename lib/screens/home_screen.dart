@@ -25,9 +25,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
           color: Colors.white,
           buttonBackgroundColor: Colors.white,
-          backgroundColor: Colors.blueAccent,
           animationCurve: Curves.easeInOut,
           animationDuration: Duration(milliseconds: 600),
+          backgroundColor: Colors.red,
           onTap: (index) {
             setState(() {
               _page = index;
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
           letIndexChange: (index) => true,
         ),
         body: Container(
-          color: Colors.blueAccent,
+          color: Colors.white,
           child: Center(
             child: Column(
               children: <Widget>[
@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () {
                     final CurvedNavigationBarState navBarState =
                         _bottomNavigationKey.currentState;
-                    navBarState.setPage(1);
+                    navBarState.setPage(3);
                   },
                 )
               ],
