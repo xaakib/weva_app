@@ -3,6 +3,7 @@ import 'package:international_phone_input/international_phone_input.dart';
 import 'package:weva_app/widgets/custom_btn.dart';
 import 'package:weva_app/screens/register_screen.dart';
 import 'package:weva_app/screens/home_screen.dart';
+import 'package:weva_app/screens/foget_password_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -108,7 +109,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        print("Forget passowrd");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ForgetPassord()),
+                        );
                       },
                       child: Text(
                         "Forget Password?",
