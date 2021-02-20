@@ -102,12 +102,17 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                     ],
                   ),
-                  Text(
-                    "Forget Password?",
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                  GestureDetector(
+                    onTap: () {
+                      print("Forget passowrd");
+                    },
+                    child: Text(
+                      "Forget Password?",
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
