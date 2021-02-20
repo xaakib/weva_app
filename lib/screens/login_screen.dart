@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:international_phone_input/international_phone_input.dart';
 import 'package:weva_app/widgets/custom_btn.dart';
+import 'package:weva_app/screens/register_screen.dart';
+import 'package:weva_app/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -122,7 +124,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 CustomBtn(
                   text: "Login",
                   onPressed: () {
-                    print("Login");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                    );
                   },
                 ),
                 Padding(
@@ -132,7 +137,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: CustomBtn(
                     text: "Create New Account",
                     onPressed: () {
-                      print("Register");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RegisterScreen()),
+                      );
                     },
                     outlineBtn: true,
                   ),

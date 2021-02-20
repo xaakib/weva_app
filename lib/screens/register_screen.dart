@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:weva_app/screens/phone_OTP_screen.dart';
 import 'package:weva_app/widgets/custom_btn.dart';
 import 'package:international_phone_input/international_phone_input.dart';
 
@@ -167,7 +167,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               CustomBtn(
                 text: "Confirm",
                 onPressed: () {
-                  print("Confirm");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PhoneOTP()),
+                  );
                 },
               ),
               SizedBox(
