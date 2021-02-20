@@ -36,18 +36,24 @@ class _HomeScreenState extends State<HomeScreen> {
                         fit: BoxFit.cover, height: 50, width: 70),
 
                     centerTitle: true,
-                    leading: Icon(Icons.menu, color: Colors.black),
+                    leading: Icon(
+                      Icons.menu,
+                      color: Colors.black,
+                      size: 30,
+                    ),
                     actions: [
                       IconButton(
                           icon: Icon(
                             Icons.search,
                             color: Colors.black,
+                            size: 30,
                           ),
                           onPressed: () {}),
                       IconButton(
                           icon: Icon(
                             Icons.shopping_cart_outlined,
                             color: Colors.black,
+                            size: 30,
                           ),
                           onPressed: () {}),
                     ],
