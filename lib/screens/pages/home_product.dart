@@ -1,5 +1,6 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
+import 'package:weva_app/widgets/flight_categori.dart';
 
 class HomeProduct extends StatefulWidget {
   @override
@@ -20,13 +21,14 @@ class _HomeProductState extends State<HomeProduct> {
           child: Carousel(
             boxFit: BoxFit.cover,
             autoplay: true,
-            animationCurve: Curves.fastOutSlowIn,
+            animationCurve: Curves.linearToEaseOut,
             animationDuration: Duration(milliseconds: 1000),
-            dotSize: 6.0,
-            dotHorizontalPadding: 10,
-            dotIncreasedColor: Color(0xFFFF335C),
+            dotSize: 7.0,
+            dotHorizontalPadding: 12,
+            dotIncreasedColor: Colors.red,
             dotBgColor: Colors.transparent,
             dotPosition: DotPosition.bottomCenter,
+            dotColor: Colors.white,
             dotVerticalPadding: 10.0,
             showIndicator: true,
             indicatorBgPadding: 7.0,
@@ -45,6 +47,61 @@ class _HomeProductState extends State<HomeProduct> {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              FlightCategori(
+                icon: Icon(
+                  Icons.flight,
+                  color: Colors.white,
+                  size: 35,
+                ),
+                text: "Flight",
+                color: Colors.orange,
+              ),
+              FlightCategori(
+                icon: Icon(
+                  Icons.hotel,
+                  color: Colors.white,
+                  size: 35,
+                ),
+                text: "Hotel",
+                color: Colors.pink[300],
+              ),
+              FlightCategori(
+                icon: Icon(
+                  Icons.train_outlined,
+                  color: Colors.white,
+                  size: 35,
+                ),
+                text: "Train",
+                color: Colors.pink[300],
+              ),
+              FlightCategori(
+                icon: Icon(
+                  Icons.multiple_stop_rounded,
+                  color: Colors.white,
+                  size: 35,
+                ),
+                text: "More",
+                color: Colors.pink[300],
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 130,
+          width: MediaQuery.of(context).size.width,
+          child: Image.network(
+            "https://images.pexels.com/photos/1243046/pexels-photo-1243046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            fit: BoxFit.cover,
+          ),
+        )
       ],
     );
   }

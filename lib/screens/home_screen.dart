@@ -123,15 +123,15 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         height: 50,
-        color: Colors.black12,
+        color: Colors.black45,
         buttonBackgroundColor: Colors.red,
         backgroundColor: Colors.white,
         items: <Widget>[
-          Icon(Icons.favorite, color: Colors.black, size: 30),
-          Icon(Icons.add_alert_outlined, color: Colors.black, size: 30),
-          Icon(Icons.hotel_outlined, color: Colors.black, size: 30),
-          Icon(Icons.inbox_outlined, color: Colors.black, size: 30),
-          Icon(Icons.menu_open_outlined, color: Colors.black, size: 30),
+          Icon(Icons.favorite, color: Colors.white, size: 30),
+          Icon(Icons.add_alert_outlined, color: Colors.white, size: 30),
+          Icon(Icons.hotel_outlined, color: Colors.white, size: 30),
+          Icon(Icons.inbox_outlined, color: Colors.white, size: 30),
+          Icon(Icons.menu_open_outlined, color: Colors.white, size: 30),
         ],
         onTap: (index) {
           //Handle button tap
