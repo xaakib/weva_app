@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   international_phone_input: ^1.0.4
   curved_navigation_bar: ^0.3.7
+  font_awesome_flutter: ^8.2.0
 
 dev_dependencies:
   flutter_test:

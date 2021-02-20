@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weva_app/screens/home_screen.dart';
 
 import 'screens/login_screen.dart';
 import 'screens/phone_OTP_screen.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginScreen(),
+      home: HomeScreen(),
     );
   }
 }
