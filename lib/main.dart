@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'screens/login_screen.dart';
-import 'screens/phone_OTP.dart';
+import 'screens/phone_OTP_screen.dart';
 import 'screens/mainscreen.dart';
+import 'screens/register_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: PhoneOTP(),
+      home: RegisterScreen(),
     );
   }
 }
