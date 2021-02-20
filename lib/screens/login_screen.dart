@@ -29,126 +29,129 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 30,
-              ),
-              Image.asset(
-                "assets/images/identify.jpg",
-                height: 200,
-                fit: BoxFit.cover,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              InternationalPhoneInput(
-                onPhoneNumberChange: onPhoneNumberChange,
-                initialPhoneNumber: phoneNumber,
-                initialSelection: phoneIsoCode,
-                decoration: InputDecoration(
-                  labelText: "Mobile Number",
-                  border: OutlineInputBorder(),
+        child: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 30,
                 ),
-                enabledCountries: ['+880', ''],
-                labelText: "Phone Number",
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextFormField(
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  border: OutlineInputBorder(),
-                  suffixIcon: Icon(Icons.lock_open_outlined),
+                Image.asset(
+                  "assets/images/identify.jpg",
+                  height: 200,
+                  fit: BoxFit.cover,
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      for (var i = 0; i < 1; i += 1)
-                        Row(
-                          children: [
-                            Checkbox(
-                              onChanged: i == 1
-                                  ? null
-                                  : (bool value) {
-                                      setState(() {
-                                        checked[i] = value;
-                                      });
-                                    },
-                              tristate: i == 1,
-                              value: checked[i],
-                              activeColor: Colors.red,
-                            ),
-                            Text(
-                              'Remember ',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                          mainAxisAlignment: MainAxisAlignment.center,
-                        ),
-                    ],
+                SizedBox(
+                  height: 20,
+                ),
+                InternationalPhoneInput(
+                  onPhoneNumberChange: onPhoneNumberChange,
+                  initialPhoneNumber: phoneNumber,
+                  initialSelection: phoneIsoCode,
+                  decoration: InputDecoration(
+                    labelText: "Mobile Number",
+                    border: OutlineInputBorder(),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      print("Forget passowrd");
-                    },
-                    child: Text(
-                      "Forget Password?",
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                  enabledCountries: ['+880', ''],
+                  labelText: "Phone Number",
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    border: OutlineInputBorder(),
+                    suffixIcon: Icon(Icons.lock_open_outlined),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        for (var i = 0; i < 1; i += 1)
+                          Row(
+                            children: [
+                              Checkbox(
+                                onChanged: i == 1
+                                    ? null
+                                    : (bool value) {
+                                        setState(() {
+                                          checked[i] = value;
+                                        });
+                                      },
+                                tristate: i == 1,
+                                value: checked[i],
+                                activeColor: Colors.red,
+                              ),
+                              Text(
+                                'Remember ',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                      ],
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        print("Forget passowrd");
+                      },
+                      child: Text(
+                        "Forget Password?",
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              CustomBtn(
-                text: "Login",
-                onPressed: () {
-                  print("Login");
-                },
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  bottom: 16.0,
+                  ],
                 ),
-                child: CustomBtn(
-                  text: "Create New Account",
+                CustomBtn(
+                  text: "Login",
                   onPressed: () {
-                    print("Register");
+                    print("Login");
                   },
-                  outlineBtn: true,
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  print("as a guest");
-                },
-                child: Text(
-                  "As a guest",
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.red,
-                    fontWeight: FontWeight.w500,
+                Padding(
+                  padding: const EdgeInsets.only(
+                    bottom: 16.0,
+                  ),
+                  child: CustomBtn(
+                    text: "Create New Account",
+                    onPressed: () {
+                      print("Register");
+                    },
+                    outlineBtn: true,
                   ),
                 ),
-              )
-            ],
+                GestureDetector(
+                  onTap: () {
+                    print("as a guest");
+                  },
+                  child: Text(
+                    "As a guest",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.red,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
