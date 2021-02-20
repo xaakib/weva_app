@@ -130,6 +130,19 @@ class _LoginScreenState extends State<LoginScreen> {
                   outlineBtn: true,
                 ),
               ),
+              GestureDetector(
+                onTap: () {
+                  print("as a guest");
+                },
+                child: Text(
+                  "As a guest",
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.red,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              )
             ],
           ),
         ),

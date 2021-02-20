@@ -22,7 +22,7 @@ class CustomBtn extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        height: 65.0,
+        height: 55.0,
         decoration: BoxDecoration(
           color: _outlineBtn ? Colors.transparent : Colors.red,
           border: Border.all(
@@ -34,7 +34,7 @@ class CustomBtn extends StatelessWidget {
           ),
         ),
         margin: EdgeInsets.symmetric(
-          horizontal: 24.0,
+          horizontal: 40.0,
           vertical: 8.0,
         ),
         child: Stack(
