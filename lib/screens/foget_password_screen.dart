@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weva_app/widgets/custom_btn.dart';
 import 'package:weva_app/screens/login_screen.dart';
 
-class ForgetPassord extends StatelessWidget {
+class ForgetPassordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
