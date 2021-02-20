@@ -20,18 +20,41 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             height: MediaQuery.of(context).size.height,
             child: DefaultTabController(
-              length: 4,
+              length: 5,
+
+              //// this is for appbar//
               child: Scaffold(
+                  drawer: Drawer(),
+                  backgroundColor: Colors.white,
                   appBar: AppBar(
+                    elevation: 0,
+
                     // backgroundColor: Color(0xff109618),
-                    backgroundColor: Colors.blue,
-                    title: Padding(
-                      padding: EdgeInsets.only(top: 8.0),
-                      child: _GooglePlayAppBar(),
-                    ),
+                    backgroundColor: Colors.white,
+
+                    title: Image.asset("assets/images/wevaicon.png",
+                        fit: BoxFit.cover, height: 50, width: 70),
+
+                    centerTitle: true,
+                    leading: Icon(Icons.menu, color: Colors.black),
+                    actions: [
+                      IconButton(
+                          icon: Icon(
+                            Icons.search,
+                            color: Colors.black,
+                          ),
+                          onPressed: () {}),
+                      IconButton(
+                          icon: Icon(
+                            Icons.shopping_cart_outlined,
+                            color: Colors.black,
+                          ),
+                          onPressed: () {}),
+                    ],
+
                     bottom: TabBar(
                       isScrollable: true,
-                      indicatorColor: Colors.white,
+                      indicatorColor: Colors.black,
                       indicatorWeight: 6.0,
                       onTap: (index) {
                         setState(() {});
@@ -42,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Text(
                               'Home',
                               style: TextStyle(
-                                  color: Colors.white, fontSize: 18.0),
+                                  color: Colors.black, fontSize: 18.0),
                             ),
                           ),
                         ),
@@ -51,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Text(
                               'Salon',
                               style: TextStyle(
-                                  color: Colors.white, fontSize: 18.0),
+                                  color: Colors.black, fontSize: 18.0),
                             ),
                           ),
                         ),
@@ -60,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Text(
                               'Health',
                               style: TextStyle(
-                                  color: Colors.white, fontSize: 18.0),
+                                  color: Colors.black, fontSize: 18.0),
                             ),
                           ),
                         ),
@@ -69,7 +92,16 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Text(
                               'BOOK',
                               style: TextStyle(
-                                  color: Colors.white, fontSize: 18.0),
+                                  color: Colors.black, fontSize: 18.0),
+                            ),
+                          ),
+                        ),
+                        Tab(
+                          child: Container(
+                            child: Text(
+                              'BOOK',
+                              style: TextStyle(
+                                  color: Colors.black, fontSize: 18.0),
                             ),
                           ),
                         ),
@@ -81,7 +113,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       HomeProduct(),
                       SalonScreen(),
                       HealthScreen(),
-                      HealthScreen(), //4CAF50
+                      HealthScreen(),
+                      HealthScreen(),
                     ],
                   )),
             ),
@@ -90,15 +123,15 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         height: 50,
-        color: Colors.blue,
-        buttonBackgroundColor: Colors.black,
+        color: Colors.black12,
+        buttonBackgroundColor: Colors.red,
         backgroundColor: Colors.white,
         items: <Widget>[
-          Icon(Icons.home_outlined, color: Colors.yellow, size: 30),
-          Icon(Icons.add_alert_outlined, color: Colors.yellow, size: 30),
-          Icon(Icons.hotel_outlined, color: Colors.yellow, size: 30),
-          Icon(Icons.inbox_outlined, color: Colors.yellow, size: 30),
-          Icon(Icons.menu_open_outlined, color: Colors.yellow, size: 30),
+          Icon(Icons.favorite, color: Colors.black, size: 30),
+          Icon(Icons.add_alert_outlined, color: Colors.black, size: 30),
+          Icon(Icons.hotel_outlined, color: Colors.black, size: 30),
+          Icon(Icons.inbox_outlined, color: Colors.black, size: 30),
+          Icon(Icons.menu_open_outlined, color: Colors.black, size: 30),
         ],
         onTap: (index) {
           //Handle button tap
@@ -106,35 +139,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-}
-
-Widget _GooglePlayAppBar() {
-  return Container(
-    color: Colors.white,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Container(
-          // ignore: missing_required_param
-          child: IconButton(
-            icon: Icon(FontAwesomeIcons.bars),
-          ),
-        ),
-        Container(
-          child: Text(
-            'Google Play',
-            style: TextStyle(color: Colors.grey),
-          ),
-        ),
-        Container(
-          child: IconButton(
-              icon: Icon(
-                FontAwesomeIcons.microphone,
-                color: Colors.blueGrey,
-              ),
-              onPressed: null),
-        ),
-      ],
-    ),
-  );
 }
