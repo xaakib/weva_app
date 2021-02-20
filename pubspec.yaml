@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   international_phone_input: ^1.0.4
+  curved_navigation_bar: ^0.3.7
 
 dev_dependencies:
   flutter_test:
