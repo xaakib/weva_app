@@ -1,7 +1,5 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:weva_app/screens/pages/health_screen.dart';
 import 'package:weva_app/screens/pages/home_product.dart';
 import 'package:weva_app/screens/pages/salon_screen.dart';
