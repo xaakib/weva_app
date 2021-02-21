@@ -13,18 +13,75 @@ class _LocalizationState extends State<Localization> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: RaisedButton(
-            child: Text("Select Your Language"),
-            onPressed: () {
-              showDialog(
-                barrierDismissible: true,
-                context: context,
-                builder: (conetx) {
-                  return showDiyalogs();
-                },
-              );
-            }),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 150,
+            ),
+            Image.asset(
+              "assets/images/wevaicon.png",
+              height: 150,
+              fit: BoxFit.cover,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "WELCOME ",
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  " to",
+                  style: TextStyle(
+                      fontSize: 19,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  " Weva app",
+                  style: TextStyle(
+                      fontSize: 28,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              " We are here to help you. You will a better \n experience in online ticket booking. we will\n provide the best servicfor you",
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w400),
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            Center(
+              child: RaisedButton(
+                  child: Text("Select Your Language"),
+                  onPressed: () {
+                    showDialog(
+                      barrierDismissible: true,
+                      context: context,
+                      builder: (conetx) {
+                        return showDiyalogs();
+                      },
+                    );
+                  }),
+            ),
+          ],
+        ),
       ),
     );
   }
