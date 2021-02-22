@@ -118,7 +118,18 @@ class _HomeProductState extends State<HomeProduct> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                RecoermendedCategori(),
+                RecoermendedCategori(
+                  text: "Salon Service",
+                  rating: "4.0",
+                  imageUrl:
+                      "https://images.freeimages.com/images/small-previews/e5f/pink-lotus-1396744.jpg",
+                ),
+                RecoermendedCategori(
+                  text: "Salon Service",
+                  rating: "4.0",
+                  imageUrl:
+                      "https://images.freeimages.com/images/small-previews/e5f/pink-lotus-1396744.jpg",
+                ),
               ],
             ),
           ),

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class RecoermendedCategori extends StatelessWidget {
-  const RecoermendedCategori({
-    Key key,
-  }) : super(key: key);
+  final String imageUrl;
+  final String text;
+  final String rating;
 
+  const RecoermendedCategori({Key key, this.imageUrl, this.text, this.rating})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,8 +17,9 @@ class RecoermendedCategori extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-                image:
-                    NetworkImage('https://googleflutter.com/sample_image.jpg'),
+                image: NetworkImage(
+                  imageUrl,
+                ),
                 fit: BoxFit.fill),
           ),
         ),
@@ -26,7 +29,7 @@ class RecoermendedCategori extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Salon Service",
+              text,
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 17,
@@ -38,7 +41,7 @@ class RecoermendedCategori extends StatelessWidget {
                   width: 5,
                 ),
                 Icon(Icons.star, size: 15, color: Colors.green),
-                Text("4.8")
+                Text(rating),
               ],
             )
           ],
