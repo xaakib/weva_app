@@ -54,7 +54,7 @@ class FlightCategori extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Container(
-            height: 550,
+            height: 500,
             width: 300,
             decoration: new BoxDecoration(
               shape: BoxShape.rectangle,

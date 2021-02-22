@@ -11,6 +11,7 @@ class _HomeProductState extends State<HomeProduct> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
           height: 20,
@@ -95,13 +96,14 @@ class _HomeProductState extends State<HomeProduct> {
           height: 10,
         ),
         Container(
-          height: 130,
+          height: 150,
           width: MediaQuery.of(context).size.width,
           child: Image.network(
             "https://images.pexels.com/photos/1243046/pexels-photo-1243046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             fit: BoxFit.cover,
           ),
-        )
+        ),
+        Text("Recommended")
       ],
     );
   }
