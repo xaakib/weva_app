@@ -23,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
               //// this is for appbar//
               child: Scaffold(
-                  drawer: Drawer(),
                   backgroundColor: Colors.white,
                   appBar: AppBar(
                     elevation: 0,
@@ -37,8 +36,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     centerTitle: true,
                     leading: IconButton(
                       onPressed: () {
+                        print("Menu");
                         showDialog(
-                          barrierDismissible: true,
                           context: context,
                           builder: (conetx) {
                             return showAlert();
@@ -247,6 +246,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.white,
                     fontWeight: FontWeight.bold),
               )),
+          Positioned(
+            bottom: -60,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+                print("Clicked");
+              },
+              icon: Icon(
+                Icons.cancel,
+                size: 60,
+                color: Colors.redAccent,
+              ),
+            ),
+          ),
         ],
       ),
     );
