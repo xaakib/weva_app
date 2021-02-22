@@ -103,7 +103,41 @@ class _HomeProductState extends State<HomeProduct> {
             fit: BoxFit.cover,
           ),
         ),
-        Text("Recommended")
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            "Recommended",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              Container(
+                width: 80,
+                height: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          'https://googleflutter.com/sample_image.jpg'),
+                      fit: BoxFit.fill),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Salon Service",
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 17,
+                ),
+              )
+            ],
+          ),
+        ),
       ],
     );
   }
