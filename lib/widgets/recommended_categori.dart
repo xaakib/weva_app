@@ -9,44 +9,47 @@ class RecoermendedCategori extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            image: DecorationImage(
-                image: NetworkImage(
-                  imageUrl,
-                ),
-                fit: BoxFit.fill),
-          ),
-        ),
-        SizedBox(
-          width: 10,
-        ),
-        Row(
-          children: [
-            Text(
-              text,
-              style: TextStyle(
-                fontWeight: FontWeight.w700,
-                fontSize: 17,
-              ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                  image: NetworkImage(
+                    imageUrl,
+                  ),
+                  fit: BoxFit.fill),
             ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 5,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              Text(
+                text,
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
                 ),
-                Icon(Icons.star, size: 15, color: Colors.green),
-                Text(rating),
-              ],
-            )
-          ],
-        )
-      ],
+              ),
+              // Row(
+              //   children: [
+              //     SizedBox(
+              //       width: 5,
+              //     ),
+              //     Icon(Icons.star, size: 15, color: Colors.green),
+              //     Text(rating),
+              //   ],
+              // )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

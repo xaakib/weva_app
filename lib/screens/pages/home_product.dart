@@ -116,20 +116,24 @@ class _HomeProductState extends State<HomeProduct> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 RecoermendedCategori(
                   text: "Salon Service",
                   rating: "4.0",
                   imageUrl:
-                      "https://images.freeimages.com/images/small-previews/e5f/pink-lotus-1396744.jpg",
+                      "https://images.unsplash.com/photo-1612831660296-0cd5841b89fb?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 ),
                 RecoermendedCategori(
-                  text: "Salon Service",
-                  rating: "4.0",
-                  imageUrl:
-                      "https://images.freeimages.com/images/small-previews/e5f/pink-lotus-1396744.jpg",
-                ),
+                    text: "Rose Service",
+                    rating: "4.0",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1613988470206-4698354f5ee2?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
+                RecoermendedCategori(
+                    text: "Rose Service",
+                    rating: "4.0",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1613988470206-4698354f5ee2?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
               ],
             ),
           ),
