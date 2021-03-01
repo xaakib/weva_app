@@ -157,111 +157,114 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget showAlert() {
     return AlertDialog(
-      content: Stack(
-        overflow: Overflow.visible,
-        alignment: Alignment.topCenter,
-        children: [
-          Container(
-            height: 560,
-            width: 300,
-            decoration: new BoxDecoration(
-              shape: BoxShape.rectangle,
-              color: const Color(0xFFFFFF),
-              borderRadius: BorderRadius.all(Radius.circular(40.0)),
-            ),
-            child: new Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.settings,
-                    size: 25,
-                    color: Colors.green,
+      content: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Stack(
+          overflow: Overflow.visible,
+          alignment: Alignment.topCenter,
+          children: [
+            Container(
+              height: 520,
+              width: MediaQuery.of(context).size.width,
+              decoration: new BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: const Color(0xFFFFFF),
+                borderRadius: BorderRadius.all(Radius.circular(40.0)),
+              ),
+              child: new Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  SettingsMenu(
+                    icon: Icon(
+                      Icons.settings,
+                      size: 25,
+                      color: Colors.green,
+                    ),
+                    text: "Profile",
                   ),
-                  text: "Profile",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.add_to_home_screen,
-                    size: 25,
-                    color: Colors.pink,
+                  Divider(),
+                  SettingsMenu(
+                    icon: Icon(
+                      Icons.add_to_home_screen,
+                      size: 25,
+                      color: Colors.pink,
+                    ),
+                    text: "Eva Points",
                   ),
-                  text: "Eva Points",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.call,
-                    size: 25,
-                    color: Colors.red,
+                  Divider(),
+                  SettingsMenu(
+                    icon: Icon(
+                      Icons.call,
+                      size: 25,
+                      color: Colors.red,
+                    ),
+                    text: "My reservation",
                   ),
-                  text: "My reservation",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.notifications,
-                    size: 25,
-                    color: Colors.green,
+                  Divider(),
+                  SettingsMenu(
+                    icon: Icon(
+                      Icons.notifications,
+                      size: 25,
+                      color: Colors.green,
+                    ),
+                    text: "notifications",
                   ),
-                  text: "notifications",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.notifications,
-                    size: 25,
-                    color: Colors.pinkAccent,
+                  Divider(),
+                  SettingsMenu(
+                    icon: Icon(
+                      Icons.notifications,
+                      size: 25,
+                      color: Colors.pinkAccent,
+                    ),
+                    text: "notifications",
                   ),
-                  text: "notifications",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.verified_user,
-                    size: 25,
-                    color: Colors.blue,
+                  Divider(),
+                  SettingsMenu(
+                    icon: Icon(
+                      Icons.verified_user,
+                      size: 25,
+                      color: Colors.blue,
+                    ),
+                    text: "notifications",
                   ),
-                  text: "notifications",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.settings,
-                    size: 25,
-                    color: Colors.greenAccent,
+                  Divider(),
+                  SettingsMenu(
+                    icon: Icon(
+                      Icons.settings,
+                      size: 25,
+                      color: Colors.greenAccent,
+                    ),
+                    text: "Settings",
                   ),
-                  text: "Settings",
-                ),
-                Divider(),
-              ],
-            ),
-          ),
-          Positioned(
-              top: -90,
-              child: Text(
-                "Menu",
-                style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-              )),
-          Positioned(
-            bottom: -60,
-            child: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-                print("Clicked");
-              },
-              icon: Icon(
-                Icons.cancel,
-                size: 60,
-                color: Colors.redAccent,
+                  Divider(),
+                ],
               ),
             ),
-          ),
-        ],
+            Positioned(
+                top: -90,
+                child: Text(
+                  "Menu",
+                  style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                )),
+            Positioned(
+              bottom: -60,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  print("Clicked");
+                },
+                icon: Icon(
+                  Icons.cancel,
+                  size: 60,
+                  color: Colors.redAccent,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
