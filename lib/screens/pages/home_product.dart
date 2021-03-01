@@ -97,13 +97,35 @@ class _HomeProductState extends State<HomeProduct> {
             ),
           ),
           Container(
-            height: MediaQuery.of(context).size.height,
+            height: 350,
+            child: GridView.builder(
+                shrinkWrap: true,
+                itemCount: 5,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3, childAspectRatio: 0.8),
+                itemBuilder: (BuildContext context, int index) {
+                  return RecoermendedCategori(
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1581803118522-7b72a50f7e9f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    text: "Salon Service",
+                    subText: "California",
+                    rating: "3.9",
+                  );
+                }),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "All Service",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+            ),
+          ),
+          Container(
+            height: 450,
             child: GridView.builder(
                 itemCount: 7,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    mainAxisSpacing: 2,
-                    childAspectRatio: 0.8),
+                    crossAxisCount: 3, childAspectRatio: 0.8),
                 itemBuilder: (BuildContext context, int index) {
                   return RecoermendedCategori(
                     imageUrl:

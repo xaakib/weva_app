@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     bottom: TabBar(
                       isScrollable: true,
-                      indicatorColor: Colors.black,
+                      indicatorColor: Colors.red,
                       indicatorWeight: 6.0,
                       onTap: (index) {
                         setState(() {});
