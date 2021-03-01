@@ -162,7 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
         alignment: Alignment.topCenter,
         children: [
           Container(
-            height: 500,
+            height: 560,
             width: 300,
             decoration: new BoxDecoration(
               shape: BoxShape.rectangle,
@@ -179,6 +179,60 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.green,
                   ),
                   text: "Profile",
+                ),
+                Divider(),
+                SettingsMenu(
+                  icon: Icon(
+                    Icons.add_to_home_screen,
+                    size: 25,
+                    color: Colors.pink,
+                  ),
+                  text: "Eva Points",
+                ),
+                Divider(),
+                SettingsMenu(
+                  icon: Icon(
+                    Icons.call,
+                    size: 25,
+                    color: Colors.red,
+                  ),
+                  text: "My reservation",
+                ),
+                Divider(),
+                SettingsMenu(
+                  icon: Icon(
+                    Icons.notifications,
+                    size: 25,
+                    color: Colors.green,
+                  ),
+                  text: "notifications",
+                ),
+                Divider(),
+                SettingsMenu(
+                  icon: Icon(
+                    Icons.notifications,
+                    size: 25,
+                    color: Colors.pinkAccent,
+                  ),
+                  text: "notifications",
+                ),
+                Divider(),
+                SettingsMenu(
+                  icon: Icon(
+                    Icons.verified_user,
+                    size: 25,
+                    color: Colors.blue,
+                  ),
+                  text: "notifications",
+                ),
+                Divider(),
+                SettingsMenu(
+                  icon: Icon(
+                    Icons.settings,
+                    size: 25,
+                    color: Colors.greenAccent,
+                  ),
+                  text: "Settings",
                 ),
                 Divider(),
               ],
