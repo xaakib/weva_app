@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                     labelText: 'Password',
                     border: OutlineInputBorder(),
-                    suffixIcon: Icon(Icons.lock_open_outlined),
+                    suffixIcon: Icon(Icons.lock_open),
                   ),
                 ),
                 SizedBox(

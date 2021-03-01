@@ -76,7 +76,7 @@ class _HomeProductState extends State<HomeProduct> {
                 ),
                 FlightCategori(
                   icon: Icon(
-                    Icons.train_outlined,
+                    Icons.train,
                     color: Colors.white,
                     size: 35,
                   ),
@@ -85,7 +85,7 @@ class _HomeProductState extends State<HomeProduct> {
                 ),
                 FlightCategori(
                   icon: Icon(
-                    Icons.multiple_stop_rounded,
+                    Icons.multiline_chart,
                     color: Colors.white,
                     size: 35,
                   ),

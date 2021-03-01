@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           onPressed: () {}),
                       IconButton(
                           icon: Icon(
-                            Icons.shopping_cart_outlined,
+                            Icons.shopping_cart,
                             color: Colors.black,
                             size: 30,
                           ),
@@ -143,10 +143,10 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white,
         items: <Widget>[
           Icon(Icons.favorite, color: Colors.white, size: 30),
-          Icon(Icons.add_alert_outlined, color: Colors.white, size: 30),
-          Icon(Icons.hotel_outlined, color: Colors.white, size: 30),
-          Icon(Icons.inbox_outlined, color: Colors.white, size: 30),
-          Icon(Icons.menu_open_outlined, color: Colors.white, size: 30),
+          Icon(Icons.add_alert, color: Colors.white, size: 30),
+          Icon(Icons.hotel, color: Colors.white, size: 30),
+          Icon(Icons.inbox, color: Colors.white, size: 30),
+          Icon(Icons.menu, color: Colors.white, size: 30),
         ],
         onTap: (index) {
           //Handle button tap
@@ -174,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: <Widget>[
                 SettingsMenu(
                   icon: Icon(
-                    Icons.portable_wifi_off_outlined,
+                    Icons.wifi,
                     color: Colors.green,
                     size: 35,
                   ),
@@ -192,7 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Divider(),
                 SettingsMenu(
                   icon: Icon(
-                    Icons.restore_outlined,
+                    Icons.restore,
                     color: Colors.purple,
                     size: 35,
                   ),

@@ -19,7 +19,7 @@ class SettingsMenu extends StatelessWidget {
         trailing: IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.arrow_right_sharp,
+            Icons.arrow_right,
             size: 40,
             color: Colors.red,
           ),
