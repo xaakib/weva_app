@@ -10,7 +10,7 @@ class _HealthScreenState extends State<HealthScreen> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        child: Text("healtScreen"),
+        child: Text("More screen"),
       ),
     );
   }

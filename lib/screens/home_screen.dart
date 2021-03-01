@@ -138,9 +138,9 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         height: 50,
-        color: Colors.black45,
+        color: Colors.black38,
         buttonBackgroundColor: Colors.red,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         items: <Widget>[
           Icon(Icons.favorite, color: Colors.white, size: 30),
           Icon(Icons.add_alert, color: Colors.white, size: 30),

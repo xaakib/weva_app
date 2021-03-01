@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class FlightCategori extends StatelessWidget {
   final String text;
-  final Icon icon;
+  final String imageIcon;
   final Color color;
 
-  const FlightCategori({Key key, this.text, this.icon, this.color})
+  const FlightCategori({Key key, this.text, this.imageIcon, this.color})
       : super(key: key);
 
   @override
@@ -13,19 +13,14 @@ class FlightCategori extends StatelessWidget {
     return InkWell(
       onTap: () {},
       child: Container(
-        width: 70,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Container(
+              Image.asset(
+                imageIcon,
                 height: 70,
                 width: 70,
-                decoration: BoxDecoration(color: color, shape: BoxShape.circle),
-                child: icon,
-              ),
-              SizedBox(
-                height: 10,
               ),
               Text(
                 text,

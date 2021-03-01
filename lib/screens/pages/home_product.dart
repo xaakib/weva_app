@@ -57,38 +57,22 @@ class _HomeProductState extends State<HomeProduct> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 FlightCategori(
-                  icon: Icon(
-                    Icons.flight,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+                  imageIcon: "assets/icons/flight.png",
                   text: "Flight",
                   color: Colors.orange,
                 ),
                 FlightCategori(
-                  icon: Icon(
-                    Icons.hotel,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+                  imageIcon: "assets/icons/hotel.png",
                   text: "Hotel",
                   color: Colors.pink[300],
                 ),
                 FlightCategori(
-                  icon: Icon(
-                    Icons.train,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+                  imageIcon: "assets/icons/train.png",
                   text: "Train",
                   color: Colors.pink[300],
                 ),
                 FlightCategori(
-                  icon: Icon(
-                    Icons.multiline_chart,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+                  imageIcon: "assets/icons/more.png",
                   text: "More",
                   color: Colors.pink[300],
                 ),
