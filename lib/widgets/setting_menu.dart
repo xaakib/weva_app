@@ -14,13 +14,13 @@ class SettingsMenu extends StatelessWidget {
         leading: icon,
         title: Text(
           text,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
         ),
         trailing: IconButton(
           onPressed: () {},
           icon: Icon(
             Icons.arrow_right,
-            size: 40,
+            size: 30,
             color: Colors.red,
           ),
         ));

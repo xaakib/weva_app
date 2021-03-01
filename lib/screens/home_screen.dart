@@ -174,66 +174,13 @@ class _HomeScreenState extends State<HomeScreen> {
               children: <Widget>[
                 SettingsMenu(
                   icon: Icon(
-                    Icons.wifi,
+                    Icons.settings,
+                    size: 25,
                     color: Colors.green,
-                    size: 35,
                   ),
                   text: "Profile",
                 ),
                 Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.star,
-                    color: Colors.pink,
-                    size: 35,
-                  ),
-                  text: "Eva Points",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.restore,
-                    color: Colors.purple,
-                    size: 35,
-                  ),
-                  text: "My reservation",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.notification_important,
-                    color: Colors.green,
-                    size: 35,
-                  ),
-                  text: "Notification",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.verified_user,
-                    color: Colors.red,
-                    size: 35,
-                  ),
-                  text: "User directory",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.search,
-                    color: Colors.blue,
-                    size: 35,
-                  ),
-                  text: "About Us",
-                ),
-                Divider(),
-                SettingsMenu(
-                  icon: Icon(
-                    Icons.settings,
-                    color: Colors.red,
-                    size: 35,
-                  ),
-                  text: "Settings",
-                ),
               ],
             ),
           ),
