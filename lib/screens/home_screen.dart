@@ -164,79 +164,135 @@ class _HomeScreenState extends State<HomeScreen> {
           alignment: Alignment.topCenter,
           children: [
             Container(
-              height: 520,
+              height: 450,
               width: MediaQuery.of(context).size.width,
               decoration: new BoxDecoration(
                 shape: BoxShape.rectangle,
                 color: const Color(0xFFFFFF),
                 borderRadius: BorderRadius.all(Radius.circular(40.0)),
               ),
-              child: new Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  SettingsMenu(
-                    icon: Icon(
-                      Icons.settings,
-                      size: 25,
+              child: ListView(
+                children: [
+                  ListTile(
+                    leading: Icon(
+                      Icons.markunread,
                       color: Colors.green,
                     ),
-                    text: "Profile",
-                  ),
-                  Divider(),
-                  SettingsMenu(
-                    icon: Icon(
-                      Icons.add_to_home_screen,
-                      size: 25,
-                      color: Colors.pink,
+                    title: Text(
+                      "Profile",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
                     ),
-                    text: "Eva Points",
-                  ),
-                  Divider(),
-                  SettingsMenu(
-                    icon: Icon(
-                      Icons.call,
+                    trailing: Icon(
+                      Icons.arrow_right,
                       size: 25,
                       color: Colors.red,
                     ),
-                    text: "My reservation",
                   ),
-                  Divider(),
-                  SettingsMenu(
-                    icon: Icon(
-                      Icons.notifications,
+                  ListTile(
+                    leading: Icon(
+                      Icons.cake,
+                      color: Colors.pink,
+                    ),
+                    title: Text(
+                      "Eva Points",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_right,
                       size: 25,
+                      color: Colors.red,
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.call_end,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      "My reservation",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_right,
+                      size: 25,
+                      color: Colors.red,
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.notifications,
+                      color: Colors.red,
+                    ),
+                    title: Text(
+                      "Notifications",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_right,
+                      size: 25,
+                      color: Colors.red,
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.verified_user,
                       color: Colors.green,
                     ),
-                    text: "notifications",
-                  ),
-                  Divider(),
-                  SettingsMenu(
-                    icon: Icon(
-                      Icons.notifications,
-                      size: 25,
-                      color: Colors.pinkAccent,
+                    title: Text(
+                      "User Directory",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
                     ),
-                    text: "notifications",
-                  ),
-                  Divider(),
-                  SettingsMenu(
-                    icon: Icon(
-                      Icons.verified_user,
+                    trailing: Icon(
+                      Icons.arrow_right,
                       size: 25,
+                      color: Colors.red,
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.search,
+                      color: Colors.green,
+                    ),
+                    title: Text(
+                      "About us",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_right,
+                      size: 25,
+                      color: Colors.red,
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.settings,
                       color: Colors.blue,
                     ),
-                    text: "notifications",
-                  ),
-                  Divider(),
-                  SettingsMenu(
-                    icon: Icon(
-                      Icons.settings,
-                      size: 25,
-                      color: Colors.greenAccent,
+                    title: Text(
+                      "Settings",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
                     ),
-                    text: "Settings",
+                    trailing: Icon(
+                      Icons.arrow_right,
+                      size: 25,
+                      color: Colors.red,
+                    ),
                   ),
-                  Divider(),
+                  ListTile(
+                    leading: Icon(
+                      Icons.all_out,
+                      color: Colors.red,
+                    ),
+                    title: Text(
+                      "Logout",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_right,
+                      size: 25,
+                      color: Colors.red,
+                    ),
+                  ),
                 ],
               ),
             ),
