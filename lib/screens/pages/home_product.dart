@@ -1,7 +1,6 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:weva_app/widgets/flight_categori.dart';
-
 import 'package:weva_app/widgets/recommended_categori.dart';
 
 class HomeProduct extends StatefulWidget {
@@ -97,29 +96,23 @@ class _HomeProductState extends State<HomeProduct> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                RecoermendedCategori(
-                  text: "Salon Service",
-                  rating: "4.0",
-                  imageUrl:
-                      "https://images.unsplash.com/photo-1612831660296-0cd5841b89fb?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                ),
-                RecoermendedCategori(
-                    text: "Rose Service",
-                    rating: "4.0",
+          Container(
+            height: MediaQuery.of(context).size.height,
+            child: GridView.builder(
+                itemCount: 7,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    mainAxisSpacing: 2,
+                    childAspectRatio: 0.8),
+                itemBuilder: (BuildContext context, int index) {
+                  return RecoermendedCategori(
                     imageUrl:
-                        "https://images.unsplash.com/photo-1613988470206-4698354f5ee2?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
-                RecoermendedCategori(
-                    text: "Rose Service",
-                    rating: "4.0",
-                    imageUrl:
-                        "https://images.unsplash.com/photo-1613988470206-4698354f5ee2?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
-              ],
-            ),
+                        "https://images.unsplash.com/photo-1581803118522-7b72a50f7e9f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    text: "Salon Service",
+                    subText: "California",
+                    rating: "3.9",
+                  );
+                }),
           ),
           SizedBox(
             height: 200,
