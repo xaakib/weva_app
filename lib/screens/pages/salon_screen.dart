@@ -108,7 +108,7 @@ class _SalonScreenState extends State<SalonScreen> {
                 shrinkWrap: true,
                 itemCount: 5,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3, childAspectRatio: 0.8),
+                    crossAxisCount: 3, childAspectRatio: 0.7),
                 itemBuilder: (BuildContext context, int index) {
                   return RecoermendedCategori(
                     imageUrl:
@@ -131,7 +131,7 @@ class _SalonScreenState extends State<SalonScreen> {
             child: GridView.builder(
                 itemCount: 7,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3, childAspectRatio: 0.8),
+                    crossAxisCount: 3, childAspectRatio: 0.7),
                 itemBuilder: (BuildContext context, int index) {
                   return RecoermendedCategori(
                     imageUrl:
