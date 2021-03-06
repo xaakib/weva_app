@@ -25,24 +25,28 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-
-        // backgroundColor: Color(0xff109618),
         backgroundColor: Colors.white,
-
         title: Image.asset("assets/images/wevaicon.png",
             fit: BoxFit.cover, height: 50, width: 70),
-
         centerTitle: true,
         leading: IconButton(
-          onPressed: () {
-            print("Menu");
-            showDialog(
-              context: context,
-              builder: (conetx) {
-                return showAlert();
-              },
-            );
-          },
+          onPressed: () => showGeneralDialog(
+            barrierLabel: "Barrier",
+            barrierDismissible: true,
+            barrierColor: Colors.black.withOpacity(0.5),
+            transitionDuration: Duration(milliseconds: 300),
+            context: context,
+            pageBuilder: (_, __, ___) {
+              return buildListView();
+            },
+            transitionBuilder: (_, anim, __, child) {
+              return SlideTransition(
+                position:
+                    Tween(begin: Offset(0, 1), end: Offset(0, 0)).animate(anim),
+                child: child,
+              );
+            },
+          ),
           icon: Icon(
             Icons.menu,
             color: Colors.black,
@@ -85,25 +89,27 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget showAlert() {
-    return AlertDialog(
-      content: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Stack(
-          overflow: Overflow.visible,
-          alignment: Alignment.topCenter,
+  Widget buildListView() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+      child: Scaffold(
+        body: Stack(
           children: [
-            Container(
-              height: 450,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: const Color(0xFFFFFF),
-                borderRadius: BorderRadius.all(Radius.circular(40.0)),
+            Positioned(
+              top: 10,
+              child: Text(
+                "menu",
+                style: TextStyle(color: Colors.black, fontSize: 50),
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(50.0),
               child: ListView(
                 children: [
                   ListTile(
+                    onTap: () {
+                      print("Profile");
+                    },
                     leading: Icon(
                       Icons.markunread,
                       color: Colors.green,
@@ -123,6 +129,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       Icons.cake,
                       color: Colors.pink,
                     ),
+                    onTap: () {
+                      print("Eva points");
+                    },
                     title: Text(
                       "Eva Points",
                       style: TextStyle(color: Colors.black, fontSize: 18),
@@ -224,29 +233,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ],
-              ),
-            ),
-            Positioned(
-                top: -90,
-                child: Text(
-                  "Menu",
-                  style: TextStyle(
-                      fontSize: 40,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                )),
-            Positioned(
-              bottom: -60,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                  print("Clicked");
-                },
-                icon: Icon(
-                  Icons.cancel,
-                  size: 60,
-                  color: Colors.redAccent,
-                ),
               ),
             ),
           ],
