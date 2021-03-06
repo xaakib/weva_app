@@ -37,7 +37,7 @@ class RecoermendedCategori extends StatelessWidget {
                 "Salon Service",
                 style: TextStyle(
                   fontWeight: FontWeight.w900,
-                  fontSize: 13,
+                  fontSize: 12,
                 ),
               ),
               SizedBox(
@@ -45,7 +45,7 @@ class RecoermendedCategori extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Icon(Icons.star, size: 12, color: Colors.green),
+                  Icon(Icons.star, size: 11, color: Colors.green),
                   Text("8.9")
                 ],
               )
@@ -58,7 +58,7 @@ class RecoermendedCategori extends StatelessWidget {
             subText,
             style: TextStyle(
               fontWeight: FontWeight.normal,
-              fontSize: 14,
+              fontSize: 12,
               color: Colors.grey[700],
             ),
           ),
