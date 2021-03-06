@@ -93,146 +93,132 @@ class _HomeScreenState extends State<HomeScreen> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
       child: Scaffold(
-        body: Stack(
+        body: ListView(
           children: [
-            Positioned(
-              top: 10,
-              child: Text(
-                "menu",
-                style: TextStyle(color: Colors.black, fontSize: 50),
+            ListTile(
+              onTap: () {
+                print("Profile");
+              },
+              leading: Icon(
+                Icons.markunread,
+                color: Colors.green,
+              ),
+              title: Text(
+                "Profile",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 25,
+                color: Colors.red,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(50.0),
-              child: ListView(
-                children: [
-                  ListTile(
-                    onTap: () {
-                      print("Profile");
-                    },
-                    leading: Icon(
-                      Icons.markunread,
-                      color: Colors.green,
-                    ),
-                    title: Text(
-                      "Profile",
-                      style: TextStyle(color: Colors.black, fontSize: 18),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_right,
-                      size: 25,
-                      color: Colors.red,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.cake,
-                      color: Colors.pink,
-                    ),
-                    onTap: () {
-                      print("Eva points");
-                    },
-                    title: Text(
-                      "Eva Points",
-                      style: TextStyle(color: Colors.black, fontSize: 18),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_right,
-                      size: 25,
-                      color: Colors.red,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.call_end,
-                      color: Colors.teal,
-                    ),
-                    title: Text(
-                      "My reservation",
-                      style: TextStyle(color: Colors.black, fontSize: 18),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_right,
-                      size: 25,
-                      color: Colors.red,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.notifications,
-                      color: Colors.red,
-                    ),
-                    title: Text(
-                      "Notifications",
-                      style: TextStyle(color: Colors.black, fontSize: 18),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_right,
-                      size: 25,
-                      color: Colors.red,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.verified_user,
-                      color: Colors.green,
-                    ),
-                    title: Text(
-                      "User Directory",
-                      style: TextStyle(color: Colors.black, fontSize: 18),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_right,
-                      size: 25,
-                      color: Colors.red,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.search,
-                      color: Colors.green,
-                    ),
-                    title: Text(
-                      "About us",
-                      style: TextStyle(color: Colors.black, fontSize: 18),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_right,
-                      size: 25,
-                      color: Colors.red,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.settings,
-                      color: Colors.blue,
-                    ),
-                    title: Text(
-                      "Settings",
-                      style: TextStyle(color: Colors.black, fontSize: 18),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_right,
-                      size: 25,
-                      color: Colors.red,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.all_out,
-                      color: Colors.red,
-                    ),
-                    title: Text(
-                      "Logout",
-                      style: TextStyle(color: Colors.black, fontSize: 18),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_right,
-                      size: 25,
-                      color: Colors.red,
-                    ),
-                  ),
-                ],
+            ListTile(
+              leading: Icon(
+                Icons.cake,
+                color: Colors.pink,
+              ),
+              onTap: () {
+                print("Eva points");
+              },
+              title: Text(
+                "Eva Points",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 25,
+                color: Colors.red,
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.call_end,
+                color: Colors.teal,
+              ),
+              title: Text(
+                "My reservation",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 25,
+                color: Colors.red,
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.notifications,
+                color: Colors.red,
+              ),
+              title: Text(
+                "Notifications",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 25,
+                color: Colors.red,
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.verified_user,
+                color: Colors.green,
+              ),
+              title: Text(
+                "User Directory",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 25,
+                color: Colors.red,
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.search,
+                color: Colors.green,
+              ),
+              title: Text(
+                "About us",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 25,
+                color: Colors.red,
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.settings,
+                color: Colors.blue,
+              ),
+              title: Text(
+                "Settings",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 25,
+                color: Colors.red,
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.all_out,
+                color: Colors.red,
+              ),
+              title: Text(
+                "Logout",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 25,
+                color: Colors.red,
               ),
             ),
           ],
