@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'bottomNavScreens/nav_home.dart';
 import 'bottomNavScreens/nav_notification_screen.dart';
+import 'bottomNavScreens/near_Screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List listOfPage = [
     NavHomeScreen(),
     NavNotificationScreen(),
-    NavNotificationScreen(),
+    NearScreen(),
     NavNotificationScreen(),
     NavNotificationScreen(),
   ];
@@ -78,9 +79,8 @@ class _HomeScreenState extends State<HomeScreen> {
           Icon(Icons.inbox, color: Colors.white, size: 30),
           Icon(Icons.menu, color: Colors.white, size: 30),
         ],
-        onTap: (index) {
-          //Handle button tap
-        },
+        index: _currentIndex,
+        onTap: (index) => setState(() => _currentIndex = index),
       ),
     );
   }
