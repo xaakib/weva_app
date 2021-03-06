@@ -10,7 +10,10 @@ class _NavNotificationScreenState extends State<NavNotificationScreen> {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text("Notifications"),
+        child: Text(
+          "Notifications",
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
+        ),
       ),
     );
   }

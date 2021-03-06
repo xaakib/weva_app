@@ -10,7 +10,10 @@ class _NearScreenState extends State<NearScreen> {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text("NearScreen"),
+        child: Text(
+          "NearScreen",
+          style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }
