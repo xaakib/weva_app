@@ -24,8 +24,8 @@ class _NavHomeScreenState extends State<NavHomeScreen> {
         SizedBox(
           height: 10,
         ),
-        SizedBox(
-          height: 25,
+        Container(
+          height: 45,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             physics: BouncingScrollPhysics(),
@@ -41,6 +41,17 @@ class _NavHomeScreenState extends State<NavHomeScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 8),
+                      height: 3,
+                      width: 40,
+                      color: selectedIndex == index
+                          ? Colors.red
+                          : Colors.transparent,
+                    ),
+                    SizedBox(
+                      height: 2,
+                    ),
                     Text(
                       categoris[index],
                       style: TextStyle(
@@ -50,11 +61,11 @@ class _NavHomeScreenState extends State<NavHomeScreen> {
                               : Colors.grey),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 7),
-                      height: 2,
-                      width: 30,
+                      margin: EdgeInsets.only(top: 8),
+                      height: 3,
+                      width: 40,
                       color: selectedIndex == index
-                          ? Colors.black
+                          ? Colors.red
                           : Colors.transparent,
                     ),
                   ],
