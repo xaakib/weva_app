@@ -163,9 +163,9 @@ class _NavHomeScreenState extends State<NavHomeScreen> {
                 ),
               ),
               Container(
-                height: 350,
                 child: GridView.builder(
                     shrinkWrap: true,
+                    primary: false,
                     itemCount: 5,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3, childAspectRatio: 0.7),
@@ -187,8 +187,9 @@ class _NavHomeScreenState extends State<NavHomeScreen> {
                 ),
               ),
               Container(
-                height: 450,
                 child: GridView.builder(
+                    shrinkWrap: true,
+                    primary: false,
                     itemCount: 7,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3, childAspectRatio: 0.7),
