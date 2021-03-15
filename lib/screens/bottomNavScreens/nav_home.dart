@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:weva_app/widgets/flight_categori.dart';
 import 'package:weva_app/widgets/recommended_categori.dart';
 
+import 'nav_notification_screen.dart';
+import 'near_Screen.dart';
+
 class NavHomeScreen extends StatefulWidget {
   @override
   _NavHomeScreenState createState() => _NavHomeScreenState();
 }
 
 class _NavHomeScreenState extends State<NavHomeScreen> {
+  int _currentIndex = 0;
   List<String> categoris = [
     "Home",
     "Salon",
@@ -17,6 +21,8 @@ class _NavHomeScreenState extends State<NavHomeScreen> {
     "Beauty",
     "Physical"
   ];
+
+  List listOfPage = [];
 
   int selectedIndex = 0;
   @override

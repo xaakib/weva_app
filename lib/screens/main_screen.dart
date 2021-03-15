@@ -4,12 +4,12 @@ import 'bottomNavScreens/nav_home.dart';
 import 'bottomNavScreens/nav_notification_screen.dart';
 import 'bottomNavScreens/near_Screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class MainScreen extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   List listOfPage = [
