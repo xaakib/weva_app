@@ -6,7 +6,6 @@ class NavHomeScreen extends StatefulWidget {
 }
 
 class _NavHomeScreenState extends State<NavHomeScreen> {
-  int _currentIndex = 0;
   List<String> categoris = [
     "Home",
     "Salon",

@@ -58,7 +58,7 @@ class _LocalizationState extends State<Localization> {
               height: 10,
             ),
             Text(
-              " We are here to help you. You will a better \n experience in online ticket booking. we will\n provide the best servicfor you",
+              " We are here to help you. You will a better experience in online ticket booking. we will provide the best servicfor you",
               style: TextStyle(
                   fontSize: 18,
                   color: Colors.black,
