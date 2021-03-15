@@ -23,20 +23,30 @@ class MyStatelessWidget extends StatelessWidget {
       length: 12,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white,
           leading: Container(),
           bottom: TabBar(
+            isScrollable: true,
             indicator: BoxDecoration(
               border: Border(
                   bottom: BorderSide(color: Colors.red, width: 3),
                   top: BorderSide(color: Colors.red, width: 3)),
             ),
-            unselectedLabelColor: Colors.yellow,
+            unselectedLabelColor: Colors.black,
             tabs: <Widget>[
               Tab(
                 iconMargin: EdgeInsets.all(0),
                 child: Container(
                   child: Text(
                     'Home',
+                    style: TextStyle(color: Colors.pink, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Container(
+                  child: Text(
+                    'Salon',
                     style: TextStyle(color: Colors.black, fontSize: 18.0),
                   ),
                 ),
@@ -117,14 +127,6 @@ class MyStatelessWidget extends StatelessWidget {
                 child: Container(
                   child: Text(
                     'Service Provider Page',
-                    style: TextStyle(color: Colors.black, fontSize: 18.0),
-                  ),
-                ),
-              ),
-              Tab(
-                child: Container(
-                  child: Text(
-                    'Pay',
                     style: TextStyle(color: Colors.black, fontSize: 18.0),
                   ),
                 ),
