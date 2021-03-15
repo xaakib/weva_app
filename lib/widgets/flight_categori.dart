@@ -13,6 +13,8 @@ class FlightCategori extends StatelessWidget {
     return InkWell(
       onTap: () {},
       child: Container(
+        height: MediaQuery.of(context).size.height * 0.150,
+        width: MediaQuery.of(context).size.width * 0.2,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(

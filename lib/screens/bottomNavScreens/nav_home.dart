@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:weva_app/widgets/flight_categori.dart';
 import 'package:weva_app/widgets/recommended_categori.dart';
 
-import 'nav_notification_screen.dart';
-import 'near_Screen.dart';
-
 class NavHomeScreen extends StatefulWidget {
   @override
   _NavHomeScreenState createState() => _NavHomeScreenState();
@@ -124,30 +121,34 @@ class _NavHomeScreenState extends State<NavHomeScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    FlightCategori(
-                      imageIcon: "assets/icons/flight.png",
-                      text: "Flight",
-                      color: Colors.orange,
-                    ),
-                    FlightCategori(
-                      imageIcon: "assets/icons/hotel.png",
-                      text: "Hotel",
-                      color: Colors.pink[300],
-                    ),
-                    FlightCategori(
-                      imageIcon: "assets/icons/train.png",
-                      text: "Train",
-                      color: Colors.pink[300],
-                    ),
-                    FlightCategori(
-                      imageIcon: "assets/icons/more.png",
-                      text: "More",
-                      color: Colors.pink[300],
-                    ),
-                  ],
+                child: Container(
+                  height: 110,
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      FlightCategori(
+                        imageIcon: "assets/icons/flight.png",
+                        text: "Flight",
+                        color: Colors.orange,
+                      ),
+                      FlightCategori(
+                        imageIcon: "assets/icons/hotel.png",
+                        text: "Hotel",
+                        color: Colors.pink[300],
+                      ),
+                      FlightCategori(
+                        imageIcon: "assets/icons/train.png",
+                        text: "Train",
+                        color: Colors.pink[300],
+                      ),
+                      FlightCategori(
+                        imageIcon: "assets/icons/more.png",
+                        text: "More",
+                        color: Colors.pink[300],
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
