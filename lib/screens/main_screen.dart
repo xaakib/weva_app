@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:weva_app/screens/bottom_NavigationScreens/nav_home.dart';
 import 'package:weva_app/screens/bottom_NavigationScreens/nav_notification_screen.dart';
 import 'package:weva_app/screens/bottom_NavigationScreens/near_Screen.dart';
+import 'package:weva_app/screens/bottom_NavigationScreens/favourit_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   List listOfPage = [
-    NavNotificationScreen(),
+    FavouriteScreen(),
     NearScreen(),
     NavHomeScreen(),
     NavNotificationScreen(),
@@ -89,8 +90,8 @@ class _MainScreenState extends State<MainScreen> {
               icon: Center(child: FaIcon(FontAwesomeIcons.home)),
               title: 'Home'),
           TabItem(
-              icon: Center(child: FaIcon(FontAwesomeIcons.envelopeOpenText)),
-              title: 'Message'),
+              icon: Center(child: FaIcon(FontAwesomeIcons.fileExcel)),
+              title: 'Filter'),
           TabItem(
               icon: Center(child: FaIcon(FontAwesomeIcons.peopleCarry)),
               title: 'Profile'),
