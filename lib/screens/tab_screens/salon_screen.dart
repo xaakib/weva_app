@@ -106,6 +106,7 @@ class _SalonScreenState extends State<SalonScreen> {
             height: 350,
             child: GridView.builder(
                 shrinkWrap: true,
+                primary: false,
                 itemCount: 5,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3, childAspectRatio: 0.7),
@@ -130,6 +131,8 @@ class _SalonScreenState extends State<SalonScreen> {
             height: 450,
             child: GridView.builder(
                 itemCount: 7,
+                primary: false,
+                shrinkWrap: true,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3, childAspectRatio: 0.7),
                 itemBuilder: (BuildContext context, int index) {

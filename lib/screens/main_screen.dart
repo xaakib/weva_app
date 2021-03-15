@@ -2,7 +2,6 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:weva_app/screens/bottom_NavigationScreens/nav_home.dart';
-import 'package:weva_app/screens/bottom_NavigationScreens/test_home.dart';
 import 'package:weva_app/screens/bottom_NavigationScreens/profile_screen.dart';
 import 'package:weva_app/screens/bottom_NavigationScreens/near_Screen.dart';
 import 'package:weva_app/screens/bottom_NavigationScreens/favourit_screen.dart';
@@ -20,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
   List listOfPage = [
     FavouriteScreen(),
     NearScreen(),
-    MyStatelessWidget(),
+    NavHome(),
     // NavHomeScreen(),
     FilterScreen(),
     ProfileScreen(),
