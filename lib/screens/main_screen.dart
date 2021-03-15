@@ -1,8 +1,9 @@
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'bottomNavScreens/nav_home.dart';
-import 'bottomNavScreens/nav_notification_screen.dart';
-import 'bottomNavScreens/near_Screen.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:weva_app/screens/bottom_NavigationScreens/nav_home.dart';
+import 'package:weva_app/screens/bottom_NavigationScreens/nav_notification_screen.dart';
+import 'package:weva_app/screens/bottom_NavigationScreens/near_Screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -13,9 +14,9 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   List listOfPage = [
-    NavHomeScreen(),
     NavNotificationScreen(),
     NearScreen(),
+    NavHomeScreen(),
     NavNotificationScreen(),
     NavNotificationScreen(),
   ];
@@ -71,19 +72,30 @@ class _MainScreenState extends State<MainScreen> {
         ],
       ),
       body: listOfPage[_currentIndex],
-      bottomNavigationBar: CurvedNavigationBar(
+      bottomNavigationBar: ConvexAppBar(
         height: 50,
-        color: Colors.black38,
-        buttonBackgroundColor: Colors.red,
-        backgroundColor: Colors.transparent,
-        items: <Widget>[
-          Icon(Icons.favorite, color: Colors.white, size: 30),
-          Icon(Icons.add_alert, color: Colors.white, size: 30),
-          Icon(Icons.hotel, color: Colors.white, size: 30),
-          Icon(Icons.inbox, color: Colors.white, size: 30),
-          Icon(Icons.menu, color: Colors.white, size: 30),
+        color: Colors.black,
+        activeColor: Colors.red,
+        backgroundColor: Colors.white,
+        style: TabStyle.custom,
+        items: [
+          TabItem(
+              icon: Center(child: FaIcon(FontAwesomeIcons.heart)),
+              title: 'Favourite'),
+          TabItem(
+              icon: Center(child: FaIcon(FontAwesomeIcons.map)),
+              title: 'Nearby'),
+          TabItem(
+              icon: Center(child: FaIcon(FontAwesomeIcons.home)),
+              title: 'Home'),
+          TabItem(
+              icon: Center(child: FaIcon(FontAwesomeIcons.envelopeOpenText)),
+              title: 'Message'),
+          TabItem(
+              icon: Center(child: FaIcon(FontAwesomeIcons.peopleCarry)),
+              title: 'Profile'),
         ],
-        index: _currentIndex,
+        initialActiveIndex: _currentIndex,
         onTap: (index) => setState(() => _currentIndex = index),
       ),
     );

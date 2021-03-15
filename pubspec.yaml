@@ -23,15 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  carousel_pro: null
+  convex_bottom_bar: null
   cupertino_icons: ^1.0.0
-  international_phone_input:
-  curved_navigation_bar:
-  font_awesome_flutter:
-  carousel_pro:
+  font_awesome_flutter: ^8.12.0
+  international_phone_input: null
 
 dev_dependencies:
   flutter_test:
@@ -39,7 +35,6 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter.
 flutter:
 
@@ -52,13 +47,10 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
-
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
