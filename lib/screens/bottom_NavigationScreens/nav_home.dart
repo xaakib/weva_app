@@ -88,6 +88,7 @@ class _NavHomeState extends State<NavHome> {
           leading: Container(),
           bottom: TabBar(
             isScrollable: true,
+            indicatorSize: TabBarIndicatorSize.label,
             indicator: BoxDecoration(
               border: Border(
                   bottom: BorderSide(color: Colors.red, width: 3),
