@@ -17,17 +17,18 @@ class UserProfile extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Center(
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                children: [
-                  Container(
-                    height: 171,
-                    width: 309,
-                    child: Card(
-                      elevation: 2,
-                      color: Color(0xffF1F1F1),
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              children: [
+                Container(
+                  height: 171,
+                  width: 309,
+                  child: Card(
+                    elevation: 2,
+                    color: Color(0xffF1F1F1),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -75,20 +76,23 @@ class UserProfile extends StatelessWidget {
                                 width: 64,
                                 child: OutlinedButton(
                                   onPressed: () {},
-                                  child: Text("Logout"),
+                                  child: Text(
+                                    "Logout",
+                                    style: TextStyle(fontSize: 8),
+                                  ),
                                 ),
                               ),
                             ],
                           ),
                         ],
                       ),
-
-                      // Spacer(),
-                      //   IconButton(icon: Icon(Icons.edit), onPressed: () {})
                     ),
+
+                    // Spacer(),
+                    //   IconButton(icon: Icon(Icons.edit), onPressed: () {})
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
