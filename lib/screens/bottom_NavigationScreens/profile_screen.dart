@@ -8,7 +8,6 @@ class Profile extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Card(
@@ -38,7 +37,7 @@ class Profile extends StatelessWidget {
                                   TextStyle(fontSize: 19, color: Colors.black),
                             ),
                             Text(
-                              "Eva point = 30",
+                              "Eva point = 31",
                               style: TextStyle(fontSize: 17, color: Colors.red),
                             ),
                           ],

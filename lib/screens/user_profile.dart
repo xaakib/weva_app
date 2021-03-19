@@ -5,82 +5,91 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        leading: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.arrow_back_ios_outlined,
+              color: Colors.red,
+            )),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Card(
-                elevation: 2,
-                child: Container(
-                  height: 220,
-                  width: 350,
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 28.0,
-                        ),
-                        child: CircleAvatar(
-                          radius: 50,
-                          backgroundImage: AssetImage(
-                              "assets/images/profile-default_image.jpg"),
-                        ),
+          child: Center(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: [
+                  Container(
+                    height: 171,
+                    width: 309,
+                    child: Card(
+                      elevation: 2,
+                      color: Color(0xffF1F1F1),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 105,
+                            width: 105,
+                            child: CircleAvatar(
+                              backgroundImage: AssetImage(
+                                  "assets/images/profile-default_image.jpg"),
+                            ),
+                          ),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: Text(
+                                  "Anna Franklin",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: Text(
+                                  "Eva point = 30",
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.red),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: Text(
+                                  "yourmail@gmail.com",
+                                  style: TextStyle(
+                                      fontSize: 11, color: Colors.black),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                height: 16,
+                                width: 64,
+                                child: OutlinedButton(
+                                  onPressed: () {},
+                                  child: Text("Logout"),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 18.0, top: 50),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(3.0),
-                              child: Text(
-                                "Anna Franklin",
-                                style: TextStyle(
-                                    fontSize: 19,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(3.0),
-                              child: Text(
-                                "Eva point = 30",
-                                style:
-                                    TextStyle(fontSize: 17, color: Colors.red),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(3.0),
-                              child: Text(
-                                "your@gmail.com",
-                                style:
-                                    TextStyle(fontSize: 14, color: Colors.grey),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(3.0),
-                              child: OutlinedButton(
-                                onPressed: () {},
-                                child: Text("Logout"),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
 
-                // Spacer(),
-                //   IconButton(icon: Icon(Icons.edit), onPressed: () {})
+                      // Spacer(),
+                      //   IconButton(icon: Icon(Icons.edit), onPressed: () {})
+                    ),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),

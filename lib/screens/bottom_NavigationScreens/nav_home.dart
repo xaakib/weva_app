@@ -13,7 +13,6 @@ import 'package:weva_app/screens/tab_screens/cardfile.dart';
 import 'package:weva_app/screens/tab_screens/health_screen.dart';
 import 'package:weva_app/screens/tab_screens/home_page.dart';
 import 'package:weva_app/screens/tab_screens/salon_screen.dart';
-
 import '../fav_page.dart';
 import '../user_profile.dart';
 import 'filter_screen.dart';
