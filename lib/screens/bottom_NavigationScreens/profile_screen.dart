@@ -78,7 +78,10 @@ class Profile extends StatelessWidget {
                 child: Column(
                   children: [
                     ListTile(
-                      title: Text("Account Settings"),
+                      title: Text(
+                        "Account Settings",
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                      ),
                       trailing: IconButton(
                           icon: Icon(
                             Icons.arrow_forward_ios_rounded,
@@ -88,7 +91,10 @@ class Profile extends StatelessWidget {
                     ),
                     Divider(),
                     ListTile(
-                      title: Text("Help Support"),
+                      title: Text(
+                        "Help Support",
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                      ),
                       trailing: IconButton(
                           icon: Icon(
                             Icons.arrow_forward_ios_rounded,
@@ -98,7 +104,10 @@ class Profile extends StatelessWidget {
                     ),
                     Divider(),
                     ListTile(
-                      title: Text("Sign In"),
+                      title: Text(
+                        "Sign In",
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                      ),
                       trailing: IconButton(
                           icon: Icon(
                             Icons.arrow_forward_ios_rounded,
@@ -108,7 +117,10 @@ class Profile extends StatelessWidget {
                     ),
                     Divider(),
                     ListTile(
-                      title: Text("My Point"),
+                      title: Text(
+                        "My Point",
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                      ),
                       trailing: IconButton(
                           icon: Icon(
                             Icons.arrow_forward_ios_rounded,

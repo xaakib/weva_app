@@ -65,20 +65,20 @@ class UserProfile extends StatelessWidget {
                                 child: Text(
                                   "yourmail@gmail.com",
                                   style: TextStyle(
-                                      fontSize: 11, color: Colors.black),
+                                      fontSize: 12, color: Colors.black),
                                 ),
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               Container(
-                                height: 16,
-                                width: 64,
+                                height: 20,
+                                width: 70,
                                 child: OutlinedButton(
                                   onPressed: () {},
                                   child: Text(
                                     "Logout",
-                                    style: TextStyle(fontSize: 8),
+                                    style: TextStyle(fontSize: 10),
                                   ),
                                 ),
                               ),
