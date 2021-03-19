@@ -56,17 +56,20 @@ class Cardfile extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  "Clear Cut",
-                  style: TextStyle(
-                      color: Colors.red,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 12),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "Clear Cut",
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 12),
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: 20,
