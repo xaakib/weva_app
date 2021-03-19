@@ -15,47 +15,62 @@ class _ServicePageProviderState extends State<ServicePageProvider> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 28.0),
-                          child: Column(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                Container(
+                  height: 150,
+                  width: MediaQuery.of(context).size.width,
+                  color: Colors.red,
+                  child: Stack(
+                    children: [
+                      Icon(
+                        Icons.arrow_back_ios_outlined,
+                        color: Colors.red,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            radius: 40,
+                            backgroundImage: AssetImage(
+                              "assets/images/capture.PNG",
+                            ),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              CircleAvatar(
-                                radius: 30,
-                                child: Image.asset("assets/images/capture.PNG"),
+                              Text(
+                                "Hello Kitty Beauty spa",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.add_location,
+                                    size: 15,
+                                  ),
+                                  Text(
+                                    "road-41/9,caffonia,USA",
+                                    style: TextStyle(fontSize: 9),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
-                        ),
-                        Column(
-                          children: [
-                            Text(
-                              "Hello Kitty Beauty spa",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.add_location,
-                                  size: 15,
-                                ),
-                                Text(
-                                  "road-41/9,caffonia,USA",
-                                  style: TextStyle(fontSize: 9),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Column(
+                      children: [
                         SizedBox(
                           height: 20,
                         ),
@@ -123,478 +138,479 @@ class _ServicePageProviderState extends State<ServicePageProvider> {
                         ),
                       ],
                     ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0, top: 9),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Road - 41/9 California",
-                            style: TextStyle(fontSize: 10)),
-                        SizedBox(
-                          height: 4,
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 18.0, top: 9),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Road - 41/9 California",
+                              style: TextStyle(fontSize: 10)),
+                          SizedBox(
+                            height: 4,
+                          ),
+                          Text("USA .", style: TextStyle(fontSize: 10)),
+                        ],
+                      ),
+                      Spacer(),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(color: Colors.red, width: 2)),
+                        child: Icon(
+                          FontAwesomeIcons.instagram,
+                          color: Colors.red,
+                          size: 20,
                         ),
-                        Text("USA .", style: TextStyle(fontSize: 10)),
-                      ],
-                    ),
-                    Spacer(),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.red, width: 2)),
-                      child: Icon(
-                        FontAwesomeIcons.instagram,
-                        color: Colors.red,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(color: Colors.red, width: 2)),
+                        child: Icon(FontAwesomeIcons.facebook,
+                            color: Colors.red, size: 20),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(color: Colors.red, width: 2)),
+                        child: Icon(FontAwesomeIcons.snapchat,
+                            color: Colors.red, size: 20),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(color: Colors.red, width: 2)),
+                        child: Icon(FontAwesomeIcons.phone,
+                            color: Colors.red, size: 20),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 28.0, left: 14),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      fillColor: Colors.grey[200],
+                      filled: true,
+                      prefixIcon: Icon(
+                        Icons.search,
                         size: 20,
                       ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.red, width: 2)),
-                      child: Icon(FontAwesomeIcons.facebook,
-                          color: Colors.red, size: 20),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.red, width: 2)),
-                      child: Icon(FontAwesomeIcons.snapchat,
-                          color: Colors.red, size: 20),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.red, width: 2)),
-                      child: Icon(FontAwesomeIcons.phone,
-                          color: Colors.red, size: 20),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 28.0, left: 14),
-                child: TextField(
-                  decoration: InputDecoration(
-                    fillColor: Colors.grey[200],
-                    filled: true,
-                    prefixIcon: Icon(
-                      Icons.search,
-                      size: 20,
-                    ),
-                    border: OutlineInputBorder(),
-                    hintText: "Search Service",
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
-                    child: Text(
-                      "About",
-                      style:
-                          TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                      border: OutlineInputBorder(),
+                      hintText: "Search Service",
                     ),
                   ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0, top: 10),
-                child: Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id est volutpat magna imperdiet tempus. Sed vehicula commodo risus quis commodo. Morbi tempus sagittis libero at hendrerit. Nulla eget sapien eget tur pis facilisis fringilla quis eu justo. Aliquam egestas ante ut eleifend rhoncus. Nulla facilisi. Praesent nec urna tempor, feugiat libero non, facilisis ipsum.",
-                  style: TextStyle(fontSize: 10),
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 5.0),
-                child: Column(
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        Icon(Icons.local_parking, color: Colors.red),
-                        Text("Free Parking")
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.credit_card,
-                          color: Colors.red,
-                        ),
-                        Text("Credit Cards Accepted")
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Icon(Icons.wifi, color: Colors.red),
-                        Text("WiFi available ")
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Services",
-                      style: TextStyle(fontSize: 13),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: Column(
-                  children: [
-                    Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 12.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Blow Dry",
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black),
-                                ),
-                                Text(
-                                  "AED 250.00",
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 120.0),
-                            child: IconButton(
-                              icon: Icon(
-                                Icons.error,
-                                color: Colors.red,
-                                size: 15,
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (_) => Noti()),
-                                );
-                              },
-                            ),
-                          ),
-                          Spacer(),
-                          IconButton(
-                              icon: Icon(
-                                Icons.check_box,
-                                size: 20.0,
-                                color: Colors.red,
-                              ),
-                              onPressed: () {}),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 12.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Blow Dry",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
-                          ),
-                          Text(
-                            "AED 250.00",
-                            style: TextStyle(
-                              fontSize: 10,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 120.0),
-                      child: IconButton(
-                        icon: Icon(
-                          Icons.error,
-                          color: Colors.red,
-                          size: 15,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (_) => Noti()),
-                          );
-                        },
-                      ),
-                    ),
-                    Spacer(),
-                    IconButton(
-                        icon: Icon(
-                          Icons.check_box,
-                          size: 20.0,
-                          color: Colors.red,
-                        ),
-                        onPressed: () {}),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Blow Dry",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
-                          ),
-                          Text(
-                            "AED 250.00",
-                            style: TextStyle(
-                              fontSize: 10,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 120.0),
-                      child: IconButton(
-                        icon: Icon(
-                          Icons.error,
-                          color: Colors.red,
-                          size: 15,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (_) => Noti()),
-                          );
-                        },
-                      ),
-                    ),
-                    Spacer(),
-                    IconButton(
-                        icon: Icon(
-                          Icons.check_box,
-                          size: 20.0,
-                          color: Colors.red,
-                        ),
-                        onPressed: () {}),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Blow Dry",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
-                          ),
-                          Text(
-                            "AED 250.00",
-                            style: TextStyle(
-                              fontSize: 10,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 120.0),
-                      child: IconButton(
-                        icon: Icon(
-                          Icons.error,
-                          color: Colors.red,
-                          size: 15,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (_) => Noti()),
-                          );
-                        },
-                      ),
-                    ),
-                    Spacer(),
-                    IconButton(
-                        icon: Icon(
-                          Icons.check_box,
-                          size: 20.0,
-                          color: Colors.red,
-                        ),
-                        onPressed: () {}),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 318.0),
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 30.0),
-                        child: CircleAvatar(
-                          radius: 15.0,
-                          backgroundColor: Colors.white,
-                          child: Image.asset(
-                            "assets/images/chat1.png",
-                            height: 50,
-                            width: 200,
-                            color: Colors.white,
-                            colorBlendMode: BlendMode.darken,
-
-                            // fit: BoxFit.contain,
-                            // semanticLabel: 'Desh Mascot',
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 40,
-                    ),
-                    RaisedButton(
-                      color: Colors.red[400],
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      onPressed: () {},
+                      padding: const EdgeInsets.only(left: 10.0),
                       child: Text(
-                        "Book Now",
+                        "About",
                         style: TextStyle(
-                            color: Colors.white.withOpacity(0.8), fontSize: 25),
+                            fontSize: 13, fontWeight: FontWeight.bold),
                       ),
-                    )
-                    // Container(
-                    //   color: Colors.red[400],
-                    //   // decoration: BoxDecoration(color: Colors.red),
-                    //   child: RaisedButton(
-                    //     shape: RoundedRectangleBorder(
-                    //         borderRadius: BorderRadius.circular(5)),
-                    //
-                    //     child: Text(
-                    //       'Book Now',
-                    //       style: TextStyle(
-                    //           fontSize: 20,
-                    //           color: Colors.white.withOpacity(0.8)),
-                    //     ),
-                    //     // color: Colors.red,
-                    //     // shape: RoundedRectangleBorder(
-                    //     //     borderRadius: BorderRadius.all(Radius.circular(50.0))),
-                    //     onPressed: () {},
-                    //   ),
-                    // ),
+                    ),
                   ],
                 ),
-              ),
-              SizedBox(
-                height: 100,
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0, top: 10),
+                  child: Text(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id est volutpat magna imperdiet tempus. Sed vehicula commodo risus quis commodo. Morbi tempus sagittis libero at hendrerit. Nulla eget sapien eget tur pis facilisis fringilla quis eu justo. Aliquam egestas ante ut eleifend rhoncus. Nulla facilisi. Praesent nec urna tempor, feugiat libero non, facilisis ipsum.",
+                    style: TextStyle(fontSize: 10),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.local_parking, color: Colors.red),
+                          Text("Free Parking")
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.credit_card,
+                            color: Colors.red,
+                          ),
+                          Text("Credit Cards Accepted")
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.wifi, color: Colors.red),
+                          Text("WiFi available ")
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Services",
+                        style: TextStyle(fontSize: 13),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 12.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Blow Dry",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  Text(
+                                    "AED 250.00",
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 120.0),
+                              child: IconButton(
+                                icon: Icon(
+                                  Icons.error,
+                                  color: Colors.red,
+                                  size: 15,
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (_) => Noti()),
+                                  );
+                                },
+                              ),
+                            ),
+                            Spacer(),
+                            IconButton(
+                                icon: Icon(
+                                  Icons.check_box,
+                                  size: 20.0,
+                                  color: Colors.red,
+                                ),
+                                onPressed: () {}),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 12.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Blow Dry",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Text(
+                              "AED 250.00",
+                              style: TextStyle(
+                                fontSize: 10,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 120.0),
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.error,
+                            color: Colors.red,
+                            size: 15,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (_) => Noti()),
+                            );
+                          },
+                        ),
+                      ),
+                      Spacer(),
+                      IconButton(
+                          icon: Icon(
+                            Icons.check_box,
+                            size: 20.0,
+                            color: Colors.red,
+                          ),
+                          onPressed: () {}),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 12.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Blow Dry",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Text(
+                              "AED 250.00",
+                              style: TextStyle(
+                                fontSize: 10,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 120.0),
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.error,
+                            color: Colors.red,
+                            size: 15,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (_) => Noti()),
+                            );
+                          },
+                        ),
+                      ),
+                      Spacer(),
+                      IconButton(
+                          icon: Icon(
+                            Icons.check_box,
+                            size: 20.0,
+                            color: Colors.red,
+                          ),
+                          onPressed: () {}),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 12.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Blow Dry",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Text(
+                              "AED 250.00",
+                              style: TextStyle(
+                                fontSize: 10,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 120.0),
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.error,
+                            color: Colors.red,
+                            size: 15,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (_) => Noti()),
+                            );
+                          },
+                        ),
+                      ),
+                      Spacer(),
+                      IconButton(
+                          icon: Icon(
+                            Icons.check_box,
+                            size: 20.0,
+                            color: Colors.red,
+                          ),
+                          onPressed: () {}),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 318.0),
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 30.0),
+                          child: CircleAvatar(
+                            radius: 15.0,
+                            backgroundColor: Colors.white,
+                            child: Image.asset(
+                              "assets/images/chat1.png",
+                              height: 50,
+                              width: 200,
+                              color: Colors.white,
+                              colorBlendMode: BlendMode.darken,
+
+                              // fit: BoxFit.contain,
+                              // semanticLabel: 'Desh Mascot',
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                      RaisedButton(
+                        color: Colors.red[400],
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        onPressed: () {},
+                        child: Text(
+                          "Book Now",
+                          style: TextStyle(
+                              color: Colors.white.withOpacity(0.8),
+                              fontSize: 25),
+                        ),
+                      )
+                      // Container(
+                      //   color: Colors.red[400],
+                      //   // decoration: BoxDecoration(color: Colors.red),
+                      //   child: RaisedButton(
+                      //     shape: RoundedRectangleBorder(
+                      //         borderRadius: BorderRadius.circular(5)),
+                      //
+                      //     child: Text(
+                      //       'Book Now',
+                      //       style: TextStyle(
+                      //           fontSize: 20,
+                      //           color: Colors.white.withOpacity(0.8)),
+                      //     ),
+                      //     // color: Colors.red,
+                      //     // shape: RoundedRectangleBorder(
+                      //     //     borderRadius: BorderRadius.all(Radius.circular(50.0))),
+                      //     onPressed: () {},
+                      //   ),
+                      // ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 100,
+                ),
+              ],
+            ),
           ),
         ),
       ),
