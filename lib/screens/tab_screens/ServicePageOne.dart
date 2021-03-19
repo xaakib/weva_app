@@ -45,204 +45,161 @@ class _ServicePageeOneState extends State<ServicePageeOne> {
     }
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
-            Container(
-              height: 70,
-              width: 400,
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 350.0, top: 10),
-                child: Text(
-                  "close",
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.red,
-                  ),
-                ),
-              ),
-            ),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             Container(
               height: 50,
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
+              color: Color(0xffF6F6F6),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 12.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Blow Dry",
-                          style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                        ),
-                        Text(
-                          "1 Hour",
-                          style: TextStyle(
-                              fontSize: 12,
-                              //fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                        ),
-                      ],
-                    ),
+                  Text(""),
+                  Text(
+                    "1 of 2 Service",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 18),
                   ),
-                  Spacer(),
-                  IconButton(
-                      icon: Padding(
-                        padding: const EdgeInsets.only(left: 22.0),
-                        child: Icon(
-                          Icons.timer,
-                          size: 16,
-                        ),
-                      ),
-                      onPressed: () {}),
                   Padding(
-                    padding: const EdgeInsets.only(right: 7.0),
+                    padding: const EdgeInsets.only(right: 20),
                     child: Text(
-                      "9:38",
-                      style: TextStyle(fontSize: 13),
+                      "close",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.red,
+                      ),
                     ),
                   ),
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 50,
+              color: Colors.white,
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Row(
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Blow Dry",
+                            style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black),
+                          ),
+                          Text(
+                            "1 Hour",
+                            style: TextStyle(
+                                fontSize: 12,
+                                //fontWeight: FontWeight.bold,
+                                color: Colors.black),
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      IconButton(
+                          icon: Padding(
+                            padding: const EdgeInsets.only(left: 22.0),
+                            child: Icon(
+                              Icons.timer,
+                              color: Colors.black,
+                              size: 16,
+                            ),
+                          ),
+                          onPressed: () {}),
+                      Text(
+                        "9:38",
+                        style: TextStyle(color: Colors.black, fontSize: 13),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
             SizedBox(
               height: 5,
             ),
             Container(
-              height: 200,
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 12.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Select a Professional",
-                          style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 28.0),
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    child:
-                                        Image.asset("assets/images/user.png"),
-                                  ),
-                                  Text(
-                                    "Elinda",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        fontSize: 12.0),
-                                  ),
-                                  Text(
-                                    "Ulltra Sonologist",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 12.0),
-                                  ),
-                                  Text(
-                                    "12.00PM - 9.00",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 12.0),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 28.0),
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    child:
-                                        Image.asset("assets/images/user.png"),
-                                  ),
-                                  Text(
-                                    "Elinda",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        fontSize: 12.0),
-                                  ),
-                                  Text(
-                                    "Ulltra Sonologist",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 12.0),
-                                  ),
-                                  Text(
-                                    "12.00PM - 9.00",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 12.0),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 28.0),
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    child:
-                                        Image.asset("assets/images/user.png"),
-                                  ),
-                                  Text(
-                                    "Elinda",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        fontSize: 12.0),
-                                  ),
-                                  Text(
-                                    "Ulltra Sonologist",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 12.0),
-                                  ),
-                                  Text(
-                                    "12.00PM - 9.00",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 12.0),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+              height: 150,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(color: Color(0xffF1F1F1)),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 5,
                     ),
-                  ),
-                ],
+                    Text(
+                      "Select a Professional",
+                      style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Center(
+                      child: Container(
+                        height: 120,
+                        child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            shrinkWrap: true,
+                            primary: false,
+                            itemCount: 3,
+                            itemBuilder: (context, index) {
+                              return Column(
+                                children: [
+                                  CircleAvatar(
+                                    radius: 30,
+                                    child:
+                                        Image.asset("assets/images/user.png"),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    "Elinda",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                        fontSize: 12.0),
+                                  ),
+                                  Text(
+                                    "Ulltra Sonologist",
+                                    style: TextStyle(
+                                        color: Colors.grey[700],
+                                        fontSize: 12.0),
+                                  ),
+                                  Text(
+                                    "12.00PM - 9.00",
+                                    style: TextStyle(
+                                        color: Colors.grey[700],
+                                        fontSize: 12.0),
+                                  ),
+                                ],
+                              );
+                            }),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             Container(
