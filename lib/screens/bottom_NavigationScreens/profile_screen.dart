@@ -19,12 +19,15 @@ class Profile extends StatelessWidget {
                       SizedBox(
                         height: 150,
                       ),
-                      Container(
-                        height: 105,
-                        width: 105,
-                        child: CircleAvatar(
-                          backgroundImage: AssetImage(
-                              "assets/images/profile-default_image.jpg"),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Container(
+                          height: 105,
+                          width: 105,
+                          child: CircleAvatar(
+                            backgroundImage: AssetImage(
+                                "assets/images/profile-default_image.jpg"),
+                          ),
                         ),
                       ),
                       Padding(
