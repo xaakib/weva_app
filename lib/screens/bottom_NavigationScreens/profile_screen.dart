@@ -10,35 +10,45 @@ class Profile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Card(
-                elevation: 2,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  height: 200,
-                  width: 350,
+                  color: Color(0xffF8F8F8),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 28.0, top: 10),
+                      SizedBox(
+                        height: 150,
+                      ),
+                      Container(
+                        height: 105,
+                        width: 105,
                         child: CircleAvatar(
-                          radius: 50,
                           backgroundImage: AssetImage(
                               "assets/images/profile-default_image.jpg"),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 18.0),
+                        padding: const EdgeInsets.only(left: 5),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "Anna Franklin",
-                              style:
-                                  TextStyle(fontSize: 19, color: Colors.black),
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Text(
+                                "Anna Franklin",
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
-                            Text(
-                              "Eva point = 31",
-                              style: TextStyle(fontSize: 17, color: Colors.red),
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Text(
+                                "Eva point = 30",
+                                style:
+                                    TextStyle(fontSize: 11, color: Colors.red),
+                              ),
                             ),
                           ],
                         ),
@@ -46,51 +56,54 @@ class Profile extends StatelessWidget {
                     ],
                   ),
                 ),
-
-                // Spacer(),
-                //   IconButton(icon: Icon(Icons.edit), onPressed: () {})
               ),
-              Divider(),
-              ListTile(
-                title: Text("Account Settings"),
-                trailing: IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Colors.red,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: Text("Account Settings"),
+                      trailing: IconButton(
+                          icon: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: Colors.red,
+                          ),
+                          onPressed: () {}),
                     ),
-                    onPressed: () {}),
-              ),
-              Divider(),
-              ListTile(
-                title: Text("Help Support"),
-                trailing: IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Colors.red,
+                    Divider(),
+                    ListTile(
+                      title: Text("Help Support"),
+                      trailing: IconButton(
+                          icon: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: Colors.red,
+                          ),
+                          onPressed: () {}),
                     ),
-                    onPressed: () {}),
-              ),
-              Divider(),
-              ListTile(
-                title: Text("Sign In"),
-                trailing: IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Colors.red,
+                    Divider(),
+                    ListTile(
+                      title: Text("Sign In"),
+                      trailing: IconButton(
+                          icon: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: Colors.red,
+                          ),
+                          onPressed: () {}),
                     ),
-                    onPressed: () {}),
-              ),
-              Divider(),
-              ListTile(
-                title: Text("My Point"),
-                trailing: IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Colors.red,
+                    Divider(),
+                    ListTile(
+                      title: Text("My Point"),
+                      trailing: IconButton(
+                          icon: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: Colors.red,
+                          ),
+                          onPressed: () {}),
                     ),
-                    onPressed: () {}),
-              ),
-              Divider(),
+                    Divider(),
+                  ],
+                ),
+              )
             ],
           ),
         ),
