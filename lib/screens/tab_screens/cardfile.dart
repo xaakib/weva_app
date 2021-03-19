@@ -112,6 +112,9 @@ class Cardfile extends StatelessWidget {
                         color: Colors.red,
                       ),
                       onPressed: () {}),
+                  SizedBox(
+                    width: 10,
+                  ),
                 ],
               ),
             ),
@@ -157,6 +160,9 @@ class Cardfile extends StatelessWidget {
                         color: Colors.red,
                       ),
                       onPressed: () {}),
+                  SizedBox(
+                    width: 10,
+                  ),
                 ],
               ),
             ),
@@ -171,13 +177,14 @@ class Cardfile extends StatelessWidget {
                   ),
                   Text(
                     "ADD MORE SERVICE",
-                    style: TextStyle(color: Colors.green),
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 38.0, right: 5),
+              padding: const EdgeInsets.only(top: 15.0, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -188,31 +195,29 @@ class Cardfile extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 100),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.3),
             Padding(
-              padding: const EdgeInsets.only(bottom: 22.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                  ),
-                  height: 55.0,
-                  width: 250,
-                  // ignore: deprecated_member_use
-                  child: RaisedButton(
-                    color: Colors.red,
-                    onPressed: () {},
-                    child: Text(
-                      "Start Scheduling!",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
+              padding: const EdgeInsets.symmetric(horizontal: 50),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Color(0xffDB1C27),
+                    borderRadius: BorderRadius.circular(10)),
+                height: 45,
+                width: 193,
+                // ignore: deprecated_member_use
+                child: Center(
+                  child: Text(
+                    "Start Scheduling!",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20),
                   ),
                 ),
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 40,
             ),
           ],
         )),
