@@ -55,11 +55,11 @@ class _ServicePageeOneState extends State<ServicePageeOne> {
                 color: Colors.grey[200],
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 300.0, top: 20),
+                padding: const EdgeInsets.only(left: 350.0, top: 10),
                 child: Text(
                   "close",
                   style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 15,
                     color: Colors.red,
                   ),
                 ),
@@ -86,27 +86,35 @@ class _ServicePageeOneState extends State<ServicePageeOne> {
                         Text(
                           "Blow Dry",
                           style: TextStyle(
-                              fontSize: 19,
+                              fontSize: 13,
                               fontWeight: FontWeight.bold,
                               color: Colors.black),
                         ),
                         Text(
                           "1 Hour",
                           style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                              //fontWeight: FontWeight.bold,
                               color: Colors.black),
                         ),
                       ],
                     ),
                   ),
                   Spacer(),
-                  IconButton(icon: Icon(Icons.timer), onPressed: () {}),
+                  IconButton(
+                      icon: Padding(
+                        padding: const EdgeInsets.only(left: 22.0),
+                        child: Icon(
+                          Icons.timer,
+                          size: 16,
+                        ),
+                      ),
+                      onPressed: () {}),
                   Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
+                    padding: const EdgeInsets.only(right: 7.0),
                     child: Text(
                       "9:38",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 13),
                     ),
                   ),
                 ],
@@ -133,9 +141,12 @@ class _ServicePageeOneState extends State<ServicePageeOne> {
                         Text(
                           "Select a Professional",
                           style: TextStyle(
-                              fontSize: 19,
+                              fontSize: 13,
                               fontWeight: FontWeight.bold,
                               color: Colors.black),
+                        ),
+                        SizedBox(
+                          height: 5,
                         ),
                         Row(
                           children: [
@@ -153,7 +164,7 @@ class _ServicePageeOneState extends State<ServicePageeOne> {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
-                                        fontSize: 14.0),
+                                        fontSize: 12.0),
                                   ),
                                   Text(
                                     "Ulltra Sonologist",
@@ -182,7 +193,7 @@ class _ServicePageeOneState extends State<ServicePageeOne> {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
-                                        fontSize: 14.0),
+                                        fontSize: 12.0),
                                   ),
                                   Text(
                                     "Ulltra Sonologist",
@@ -211,7 +222,7 @@ class _ServicePageeOneState extends State<ServicePageeOne> {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
-                                        fontSize: 14.0),
+                                        fontSize: 12.0),
                                   ),
                                   Text(
                                     "Ulltra Sonologist",
@@ -243,7 +254,7 @@ class _ServicePageeOneState extends State<ServicePageeOne> {
                     title: Text(
                       'Anyone',
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                     ),
                     value: _checkboxListTile,
                     onChanged: (value) {
@@ -262,9 +273,13 @@ class _ServicePageeOneState extends State<ServicePageeOne> {
               child: Padding(
                 padding: const EdgeInsets.only(right: 200.0),
                 child: Container(
-                  child: Text(
-                    "Select a Time Slot",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 55.0),
+                    child: Text(
+                      "Select a Time Slot",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                    ),
                   ),
                 ),
               ),

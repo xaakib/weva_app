@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weva_app/widgets/custom_btn.dart';
-import 'package:weva_app/screens/login_screen.dart';
+
+import 'login_screen.dart';
 
 class ForgetPassordScreen extends StatelessWidget {
   @override

@@ -1,12 +1,12 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:weva_app/screens/bottom_NavigationScreens/nav_home.dart';
-import 'package:weva_app/screens/bottom_NavigationScreens/profile_screen.dart';
-import 'package:weva_app/screens/bottom_NavigationScreens/near_Screen.dart';
-import 'package:weva_app/screens/bottom_NavigationScreens/favourit_screen.dart';
 
-import 'package:weva_app/screens/bottom_NavigationScreens/filter_screen.dart';
+import 'bottom_NavigationScreens/favourit_screen.dart';
+import 'bottom_NavigationScreens/filter_screen.dart';
+import 'bottom_NavigationScreens/nav_home.dart';
+import 'bottom_NavigationScreens/near_Screen.dart';
+import 'bottom_NavigationScreens/profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -17,12 +17,13 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   List listOfPage = [
+    NavHome(),
     FavouriteScreen(),
     NearScreen(),
-    NavHome(),
+
     // NavHomeScreen(),
     FilterScreen(),
-    ProfileScreen(),
+    Profile(),
   ];
 
   @override
@@ -84,14 +85,14 @@ class _MainScreenState extends State<MainScreen> {
         style: TabStyle.custom,
         items: [
           TabItem(
+              icon: Center(child: FaIcon(FontAwesomeIcons.home)),
+              title: 'Home'),
+          TabItem(
               icon: Center(child: FaIcon(FontAwesomeIcons.heart)),
               title: 'Favourite'),
           TabItem(
               icon: Center(child: FaIcon(FontAwesomeIcons.map)),
               title: 'Nearby'),
-          TabItem(
-              icon: Center(child: FaIcon(FontAwesomeIcons.home)),
-              title: 'Home'),
           TabItem(
               icon: Center(child: FaIcon(FontAwesomeIcons.fileExcel)),
               title: 'Filter'),

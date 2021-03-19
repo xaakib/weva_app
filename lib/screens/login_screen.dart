@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:international_phone_input/international_phone_input.dart';
-import 'package:weva_app/widgets/custom_btn.dart';
 import 'package:weva_app/screens/register_screen.dart';
-import 'package:weva_app/screens/main_screen.dart';
-import 'package:weva_app/screens/foget_password_screen.dart';
+import 'package:weva_app/widgets/custom_btn.dart';
+
+import 'foget_password_screen.dart';
+import 'main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

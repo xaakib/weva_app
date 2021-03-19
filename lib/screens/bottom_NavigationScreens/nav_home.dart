@@ -1,17 +1,23 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:weva_app/screens/tab_screens/home_page.dart';
 import 'package:weva_app/screens/tab_screens/Aboutus.dart';
 import 'package:weva_app/screens/tab_screens/BillInfo.dart';
-import 'package:weva_app/screens/tab_screens/cardfile.dart';
 import 'package:weva_app/screens/tab_screens/Nearby.dart';
 import 'package:weva_app/screens/tab_screens/Notification.dart';
-import 'package:weva_app/screens/tab_screens/health_screen.dart';
-import 'package:weva_app/screens/tab_screens/ServicePageOne.dart';
-import 'package:weva_app/screens/tab_screens/ServiceProviderPage.dart';
-import 'package:weva_app/screens/tab_screens/pay.dart';
+import 'package:weva_app/screens/tab_screens/Pay.dart';
 import 'package:weva_app/screens/tab_screens/Reservation.dart';
+import 'package:weva_app/screens/tab_screens/ServicePageOne.dart';
+import 'package:weva_app/screens/tab_screens/ServicePageProvider.dart';
+import 'package:weva_app/screens/tab_screens/ServiceProviderPage.dart';
+import 'package:weva_app/screens/tab_screens/cardfile.dart';
+import 'package:weva_app/screens/tab_screens/health_screen.dart';
+import 'package:weva_app/screens/tab_screens/home_page.dart';
 import 'package:weva_app/screens/tab_screens/salon_screen.dart';
+
+import '../fav_page.dart';
+import '../user_profile.dart';
+import 'filter_screen.dart';
+import 'profile_screen.dart';
 
 class NavHome extends StatefulWidget {
   @override
@@ -23,7 +29,7 @@ class _NavHomeState extends State<NavHome> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       initialIndex: 1,
-      length: 12,
+      length: 17,
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
@@ -34,53 +40,17 @@ class _NavHomeState extends State<NavHome> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(30),
-                    child: Image.network(
-                      "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-                      height: 50,
-                      width: 50,
-                      fit: BoxFit.cover,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 18.0),
+                    child: Text(
+                      "Weva App",
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Hi Anna,",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 22,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          Center(
-                              child: FaIcon(
-                            FontAwesomeIcons.locationArrow,
-                            size: 16,
-                          )),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            "New York,US,",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w300,
-                              fontSize: 16,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  )
                 ],
               ),
             ),
@@ -124,30 +94,6 @@ class _NavHomeState extends State<NavHome> {
               Tab(
                 child: Container(
                   child: Text(
-                    'Card',
-                    style: TextStyle(color: Colors.black, fontSize: 18.0),
-                  ),
-                ),
-              ),
-              Tab(
-                child: Container(
-                  child: Text(
-                    'BOOK',
-                    style: TextStyle(color: Colors.black, fontSize: 18.0),
-                  ),
-                ),
-              ),
-              Tab(
-                child: Container(
-                  child: Text(
-                    'BOOK',
-                    style: TextStyle(color: Colors.black, fontSize: 18.0),
-                  ),
-                ),
-              ),
-              Tab(
-                child: Container(
-                  child: Text(
                     'Profile',
                     style: TextStyle(color: Colors.black, fontSize: 18.0),
                   ),
@@ -172,7 +118,7 @@ class _NavHomeState extends State<NavHome> {
               Tab(
                 child: Container(
                   child: Text(
-                    'Service Provider',
+                    'Service Provider Page',
                     style: TextStyle(color: Colors.black, fontSize: 18.0),
                   ),
                 ),
@@ -188,7 +134,71 @@ class _NavHomeState extends State<NavHome> {
               Tab(
                 child: Container(
                   child: Text(
-                    'Service Provider Page',
+                    'ServicePageProvider',
+                    style: TextStyle(color: Colors.black, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Container(
+                  child: Text(
+                    'Pay',
+                    style: TextStyle(color: Colors.black, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Container(
+                  child: Text(
+                    'Filter',
+                    style: TextStyle(color: Colors.black, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Container(
+                  child: Text(
+                    'Bill info',
+                    style: TextStyle(color: Colors.black, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Container(
+                  child: Text(
+                    'Reservation',
+                    style: TextStyle(color: Colors.black, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Container(
+                  child: Text(
+                    'Noti',
+                    style: TextStyle(color: Colors.black, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Container(
+                  child: Text(
+                    'FavPage',
+                    style: TextStyle(color: Colors.black, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Container(
+                  child: Text(
+                    'PageABoutus',
+                    style: TextStyle(color: Colors.black, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Container(
+                  child: Text(
+                    'Near By',
                     style: TextStyle(color: Colors.black, fontSize: 18.0),
                   ),
                 ),
@@ -201,13 +211,18 @@ class _NavHomeState extends State<NavHome> {
             HomePage(),
             SalonScreen(),
             HealthScreen(),
+            UserProfile(),
+            Profile(),
             Cardfile(),
             ServiceProviderPage(),
             ServicePageeOne(),
+            ServicePageProvider(),
             Pay(),
+            FilterScreen(),
             BillInfo(),
             Reservation(),
             Noti(),
+            Fpage(),
             PageAboutUS(),
             Nearby(),
           ],

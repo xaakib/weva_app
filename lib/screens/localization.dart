@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weva_app/screens/login_screen.dart';
+
+import 'login_screen.dart';
 
 class Localization extends StatefulWidget {
   @override

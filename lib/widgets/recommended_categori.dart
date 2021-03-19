@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RecoermendedCategori extends StatelessWidget {
@@ -14,10 +15,11 @@ class RecoermendedCategori extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 100,
+            width: 130,
             height: 100,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
@@ -31,35 +33,42 @@ class RecoermendedCategori extends StatelessWidget {
             height: 5,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Salon Service",
-                style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 12,
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Text(
+                  "Salon Service",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 12,
+                  ),
                 ),
               ),
               SizedBox(
                 width: 5,
               ),
-              Row(
-                children: [
-                  Icon(Icons.star, size: 11, color: Colors.green),
-                  Text("8.9")
-                ],
-              )
+              // Row(
+              //   children: [
+              //     Icon(Icons.star, size: 11, color: Colors.green),
+              //     Text("8.9")
+              //   ],
+              // )
             ],
           ),
           SizedBox(
             height: 5,
           ),
-          Text(
-            subText,
-            style: TextStyle(
-              fontWeight: FontWeight.normal,
-              fontSize: 12,
-              color: Colors.grey[700],
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Text(
+              subText,
+              style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 12,
+                color: Colors.grey[700],
+              ),
             ),
           ),
         ],

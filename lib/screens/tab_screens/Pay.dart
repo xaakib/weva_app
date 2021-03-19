@@ -31,7 +31,7 @@ class _PayState extends State<Pay> {
                         onPressed: () {}),
                     Text(
                       "                  Payment Review",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 16),
                     ),
                     SizedBox(
                       height: 10.0,
@@ -41,49 +41,50 @@ class _PayState extends State<Pay> {
                 Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top:0.0),
+                      padding: const EdgeInsets.only(top: 0.0),
                       child: Row(
                         children: [
-
                           Container(
-                            height: 100,
-                            width: 350,
                             child: Row(
                               children: [
                                 CircleAvatar(
-                                  radius: 50,
+                                  radius: 20,
                                   backgroundImage:
-                                  AssetImage("assets/images/capture.PNG"),
+                                      AssetImage("assets/images/capture.PNG"),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(top:30.0,left: 5.0),
+                                  padding: const EdgeInsets.only(
+                                      top: 1.0, left: 5.0),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
                                         "Hello Kitty Beauty spa",
-                                        style:
-                                        TextStyle(fontSize: 15, color: Colors.black),
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.black),
                                       ),
                                       Row(
                                         children: [
-                                          Icon(Icons.location_on,size: 20,),
+                                          Icon(
+                                            Icons.location_on,
+                                            size: 15,
+                                          ),
                                           Text(
                                             "30.09 Km  away",
-                                            style:
-                                            TextStyle(fontSize: 13, color: Colors.black),
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                color: Colors.black),
                                           ),
                                         ],
                                       ),
                                     ],
                                   ),
                                 ),
-
                               ],
                             ),
                           ),
-
                         ],
                       ),
                     ),
@@ -101,30 +102,34 @@ class _PayState extends State<Pay> {
                 //     ),
                 //   ],
                 // ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 5.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Spacer(),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 90.0),
-                        child: Text(
-                          "Wednesday, 20 January 2021",
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
-                        ),
+                SizedBox(height: 5),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 125.0),
+                      child: Text(
+                        "Wednesday, 20 January 2021",
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.bold),
                       ),
-                      IconButton(icon: Icon(Icons.timer), onPressed: () {}),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 8.0),
-                        child: Text(
-                          "9:38",
-                          style: TextStyle(fontSize: 20),
-                        ),
+                    ),
+                    SizedBox(
+                      width: 40,
+                    ),
+                    Icon(
+                      Icons.timer,
+                      size: 16,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 5.0),
+                      child: Text(
+                        "9:38",
+                        style: TextStyle(fontSize: 15),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 0,
@@ -139,7 +144,7 @@ class _PayState extends State<Pay> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                          left: 12.0,
+                          left: 2.0,
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -148,7 +153,7 @@ class _PayState extends State<Pay> {
                             Text(
                               "Ultra Sonography",
                               style: TextStyle(
-                                  fontSize: 19,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
@@ -158,7 +163,7 @@ class _PayState extends State<Pay> {
                                 Text(
                                   "Duration : 1 hour",
                                   style: TextStyle(
-                                      color: Colors.black, fontSize: 14.0),
+                                      color: Colors.black, fontSize: 12.0),
                                 ),
                                 Text(
                                   "New Work, 01:00 PM",
@@ -174,10 +179,10 @@ class _PayState extends State<Pay> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(right: 40),
+                            padding: const EdgeInsets.only(right: 2),
                             child: Icon(
                               Icons.close,
-                              size: 25,
+                              size: 20,
                             ),
                           ),
                           SizedBox(
@@ -219,7 +224,7 @@ class _PayState extends State<Pay> {
                             Text(
                               "Ultra Sonography",
                               style: TextStyle(
-                                  fontSize: 19,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
@@ -229,7 +234,7 @@ class _PayState extends State<Pay> {
                                 Text(
                                   "Duration : 1 hour",
                                   style: TextStyle(
-                                      color: Colors.black, fontSize: 14.0),
+                                      color: Colors.black, fontSize: 12.0),
                                 ),
                                 Text(
                                   "New Work, 01:00 PM",
@@ -248,7 +253,7 @@ class _PayState extends State<Pay> {
                             padding: const EdgeInsets.only(right: 40),
                             child: Icon(
                               Icons.close,
-                              size: 25,
+                              size: 20,
                             ),
                           ),
                           SizedBox(
@@ -274,10 +279,10 @@ class _PayState extends State<Pay> {
                 Container(
                   height: 50,
                   child: Padding(
-                    padding: const EdgeInsets.only(right: 170.0),
+                    padding: const EdgeInsets.only(right: 235.0),
                     child: Text(
                       "+ ADD MORE SERVICE",
-                      style: TextStyle(fontSize: 20, color: Colors.green),
+                      style: TextStyle(fontSize: 13, color: Colors.green),
                     ),
                   ),
                 ),
@@ -287,89 +292,147 @@ class _PayState extends State<Pay> {
                 Container(
                   height: 20,
                   child: Padding(
-                    padding: const EdgeInsets.only(right: 150.0),
+                    padding: const EdgeInsets.only(right: 230.0),
                     child: Text(
                       "Select payment Method",
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
 
                 ListTile(
-                  leading: Text("Cradit/Debit Caerd"),
+                  leading: Padding(
+                    padding: const EdgeInsets.only(right: 35.0),
+                    child: Text(
+                      "Cradit/Debit Caerd",
+                      style: TextStyle(
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
                   title: Row(
                     children: [
-                      Image.asset("assets/images/visa.jpg",height: 40.0,width: 30,),
-                      SizedBox(width: 20,),
-                      Image.asset("assets/images/mastercard.png",height: 40.0,width: 30,),
-                      SizedBox(width: 20,),
-                       Image.asset("assets/images/paypal.png",height: 40.0,width: 30,),
-
+                      Image.asset(
+                        "assets/images/visa.jpg",
+                        height: 40.0,
+                        width: 30,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Image.asset(
+                        "assets/images/mastercard.png",
+                        height: 40.0,
+                        width: 30,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Image.asset(
+                        "assets/images/paypal.png",
+                        height: 40.0,
+                        width: 30,
+                      ),
                     ],
                   ),
-
-                  trailing: Radio(value: null, groupValue: null, onChanged: (v){
-                    setState(() {
-
-                    });
-                  }),
+                  trailing: Radio(
+                      value: null,
+                      groupValue: null,
+                      onChanged: (v) {
+                        setState(() {});
+                      }),
                 ),
                 ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(right: 35.0),
+                    child: Text(
+                      "Cradit/Debit Caerd",
+                      style: TextStyle(
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
                   title: Row(
-
                     children: [
-                      Image.asset("assets/images/dolar_icon.PNG",height: 30,width: 40,),
-                SizedBox(width: 20.0,),
-                Text("Cash Payment  "),
-                    ],
-                  ),
-
-                  trailing: Radio(value: null, groupValue: null, onChanged: (v){
-                    setState(() {
-
-                    });
-                  }),
-                ),
-
-
-
-                SizedBox(
-                  height: 5.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 18.0, top: 9),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Cradit/Debit Caerd"),
-                        ],
+                      Image.asset(
+                        "assets/images/dolar_icon.PNG",
+                        height: 40.0,
+                        width: 40,
                       ),
-                      Spacer(),
                       SizedBox(
-                        width: 5,
+                        width: 20,
                       ),
                     ],
                   ),
-                ), // Card Item
+                  trailing: Radio(
+                      value: null,
+                      groupValue: null,
+                      onChanged: (v) {
+                        setState(() {});
+                      }),
+                ),
+                // ListTile(
+                //   title: Row(
+                //     children: [
+                //       Image.asset(
+                //         "assets/images/dolar_icon.PNG",
+                //         height: 30,
+                //         width: 40,
+                //       ),
+                //       SizedBox(
+                //         width: 20.0,
+                //       ),
+                //       Text(
+                //         "Cash Payment  ",
+                //         style: TextStyle(
+                //           fontSize: 13,
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                //   trailing: Radio(
+                //       value: null,
+                //       groupValue: null,
+                //       onChanged: (v) {
+                //         setState(() {});
+                //       }),
+                // ),
+
                 SizedBox(
                   height: 5.0,
                 ),
+                // Padding(
+                //   padding: const EdgeInsets.only(left: 18.0, top: 9),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.start,
+                //     crossAxisAlignment: CrossAxisAlignment.start,
+                //     children: [
+                //       Column(
+                //         mainAxisAlignment: MainAxisAlignment.start,
+                //         crossAxisAlignment: CrossAxisAlignment.start,
+                //         children: [
+                //           Text("Cradit/Debit Caerd"),
+                //         ],
+                //       ),
+                //       Spacer(),
+                //       SizedBox(
+                //         width: 5,
+                //       ),
+                //     ],
+                //   ),
+                // ), // Card Item
+
                 Row(
                   children: [
                     Text(
                       "Use Eva Points",
-                      style: TextStyle(color: Colors.red, fontSize: 17),
+                      style: TextStyle(color: Colors.red, fontSize: 12),
                     ),
                     Spacer(), // use Spacer
                     Text(
                       "View Available Points",
-                      style: TextStyle(color: Colors.red, fontSize: 17),
+                      style: TextStyle(color: Colors.red, fontSize: 12),
                     ),
                   ],
                 ),
@@ -378,18 +441,21 @@ class _PayState extends State<Pay> {
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only(right: 28.0, left: 14),
+                  padding: const EdgeInsets.only(right: 38.0, left: 12),
                   child: TextField(
                     decoration: InputDecoration(
                       fillColor: Colors.grey[200],
                       filled: true,
                       suffixIcon: Container(
                         alignment: Alignment.center,
-                        width: 80.0,
+                        width: 100.0,
                         decoration: BoxDecoration(color: Colors.red[300]),
                         child: Padding(
-                          padding: const EdgeInsets.only(top:5.0),
-                          child: Text("Apply",style: TextStyle(fontSize: 18.0),),
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: Text(
+                            "Apply",
+                            style: TextStyle(fontSize: 18.0),
+                          ),
                         ),
                       ),
                       border: OutlineInputBorder(),
@@ -401,7 +467,7 @@ class _PayState extends State<Pay> {
                   height: 5.0,
                 ),
                 Container(
-                  height: 100,
+                  height: 70,
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
                   ),
@@ -419,7 +485,7 @@ class _PayState extends State<Pay> {
                             Text(
                               "Cart Total",
                               style: TextStyle(
-                                  fontSize: 19,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
@@ -437,7 +503,7 @@ class _PayState extends State<Pay> {
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
-                                fontSize: 15.0),
+                                fontSize: 13.0),
                           )
                         ],
                       ),
@@ -453,7 +519,7 @@ class _PayState extends State<Pay> {
                   height: 5.0,
                 ),
                 Container(
-                  height: 100,
+                  height: 70,
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
                   ),
@@ -471,7 +537,7 @@ class _PayState extends State<Pay> {
                             Text(
                               "Discount(Eva Points)",
                               style: TextStyle(
-                                  fontSize: 19,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
@@ -489,7 +555,7 @@ class _PayState extends State<Pay> {
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
-                                fontSize: 15.0),
+                                fontSize: 13.0),
                           )
                         ],
                       ),
@@ -506,7 +572,7 @@ class _PayState extends State<Pay> {
                   height: 5.0,
                 ),
                 Container(
-                  height: 100,
+                  height: 70,
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
                   ),
@@ -524,7 +590,7 @@ class _PayState extends State<Pay> {
                             Text(
                               "Total Amount Payable",
                               style: TextStyle(
-                                  fontSize: 19,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
@@ -542,7 +608,7 @@ class _PayState extends State<Pay> {
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
-                                fontSize: 15.0),
+                                fontSize: 13.0),
                           )
                         ],
                       ),
@@ -555,30 +621,45 @@ class _PayState extends State<Pay> {
                   ),
                 ),
                 SizedBox(
-                  height: 5.0,
+                  height: 25.0,
                 ),
 
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 22.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(15.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.pink,
-                      ),
-                      height: 55.0,
-                      width: 250,
-                      child: RaisedButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Select Payment Method",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        ),
-                      ),
-                    ),
+                RaisedButton(
+                  color: Colors.red[400],
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  onPressed: () {},
+                  child: Text(
+                    "Select Payment Method",
+                    style: TextStyle(
+                        color: Colors.white.withOpacity(0.8), fontSize: 14),
                   ),
                 ),
-                SizedBox(height: 100,),
+
+                // Padding(
+                //   padding: const EdgeInsets.only(bottom: 22.0),
+                //   child: ClipRRect(
+                //     borderRadius: BorderRadius.circular(15.0),
+                //     child: Container(
+                //       decoration: BoxDecoration(
+                //         color: Colors.pink,
+                //       ),
+                //       height: 55.0,
+                //       width: 250,
+                //       child: RaisedButton(
+                //         color: Colors.red[400],
+                //         onPressed: () {},
+                //         child: Text(
+                //           "Select Payment Method",
+                //           style: TextStyle(color: Colors.white, fontSize: 14),
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           ),
@@ -587,10 +668,3 @@ class _PayState extends State<Pay> {
     );
   }
 }
-
-// Flutter code sample for
-
-// ![RadioListTile sample](https://flutter.github.io/assets-for-api-docs/assets/material/radio_list_tile.png)
-//
-// This widget shows a pair of radio buttons that control the `_character`
-// field. The field is of the type `SingingCharacter`, an enum.

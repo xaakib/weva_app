@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/localization.dart';
+import 'package:weva_app/screens/localization.dart';
 
 void main() {
   runApp(MyApp());
